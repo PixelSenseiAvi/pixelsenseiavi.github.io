@@ -10,9 +10,27 @@
   <meta name="author" content="Avi Garg">
 
   <link rel="stylesheet" href="css/main.css">
-  <link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
+  <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const wrapper = document.getElementById('projectsWrapper');
+      const scroll = document.getElementById('projectsScroll');
+      const buttonLeft = document.getElementById('scrollLeft');
+      const buttonRight = document.getElementById('scrollRight');
+      const scrollAmount = 300;
+
+      buttonLeft.addEventListener('click', () => {
+          wrapper.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      });
+
+      buttonRight.addEventListener('click', () => {
+          wrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      });
+  });
+</script>
 
 <body>
   <div id="site">
@@ -21,7 +39,9 @@
       <div class="intro__wrap">
         <img class="intro__icon" src="images/avi.jpg" alt="Brand Icon" />
         <h2 class="intro__tagline">I'm
-          <span class="name">Avi Garg</span>, a creative software developer with a passion for blending Graphics and AI. My focus is on 3D rendering applications. I love working with lighting and shapes in digital spaces, using code to turn pixels into something more. Lets explore this exciting world together. 
+          <span class="name">Avi Garg</span>, a creative software developer <br> with a passion for creating <br> immersive technologies using Graphics and <br> AI.
+          My focus is on <br> 3D rendering applications. I <br> love working with lighting and <br> shapes in digital spaces, using
+          <br> code to turn pixels into <br> something more. Lets explore <br> this exciting world together.
         </h2>
       </div>
       <h3 class="intro__contact">Got an interesting project? Send me a message at
@@ -30,7 +50,7 @@
         </span>
       </h3>
     </header>
-    
+
     <section class="section background" data-sr>
       <div class="section__title">
         Background
@@ -40,418 +60,277 @@
       <div class="section__content">
         <p>I'm a software developer specialization in Computer Graphics and Image Processing. I'm currently based in
           <strong>INDIA</strong> and hold an MSc in
-          <a class="underline-link" href="https://www.tcd.ie/courses/postgraduate/az/course.php?id=DPTCS-AVRE-1F09" target="_blank">Computer Science AR/VR (Graphics and Vision technologies)</a> from <a class="underline-link" href="https://www.tcd.ie/" target="_blank">Trinity College Dublin</a>. I have gained diverse experience using
-          C/C++ and Unity across different sectors       
-          RealTime Filmmaking, embedded, and windows applications with organizations like  
-          <a class="underline-link" href="https://vigastudios.com/" target="_blank">Viga Studios</a>, 
-          <a class="underline-link" href="https://modelworks.ie/" target="_blank">Modelworks Studios</a>, 
-          <a class="underline-link" href="https://fev.com/" target="_blank">FEV</a>.</p>
-        <p>I love engaging with new technologies, people and challenges - it's the fuel for my continous learning and growth. My expertise spans Game Physics, Rendering Algorithms, Image Processing, and neural network development.</p>
+          <a class="underline-link" href="https://www.tcd.ie/courses/postgraduate/az/course.php?id=DPTCS-AVRE-1F09"
+            target="_blank">Computer Science AR/VR (Graphics and Vision technologies)</a> from <a class="underline-link"
+            href="https://www.tcd.ie/" target="_blank">Trinity College Dublin</a>. I have gained diverse experience
+          using
+          C/C++ and Unity across different <br> sectors Immersive technologies in <br> Architecture
+          RealTime Filmmaking, embedded with organizations like
+          <a class="underline-link" href="https://vigastudios.com/" target="_blank">Viga Studios</a>,
+          <a class="underline-link" href="https://modelworks.ie/" target="_blank">Modelworks Studios</a>,
+          <a class="underline-link" href="https://fev.com/" target="_blank">FEV</a>.
+          <a class="underline-link" href="https://www.a2ai.com.au/" target="_blank">A2.AI</a>.
+        </p>
+        <p>I love engaging with new technologies, people and challenges - it's the fuel for my continous learning and
+          growth. My expertise spans Game Physics, Rendering Algorithms, Image Processing, and neural network
+          development.</p>
         <p>
-         
-          <strong>Always eager for innovative projects and exciting opportunities, so don't hestitate to get in touch.</strong>
+
+          <strong>Always eager for innovative projects and exciting opportunities, so don't hestitate to get in
+            touch.</strong>
         </p>
       </div>
     </section>
 
     <section class="skills-section">
       <div class="container">
-          <h1 class="text-center">My Skills</h1>
-          <div class="row mt-5">
-              <div class="col-md-3">
-                  <h4>Programming Languages</h4>
-                  <ul>
-                      <li>C/C++</li>
-                      <li>C#</li>
-                      <li>Python</li>
-                  </ul>
-              </div>
-              <div class="col-md-3">
-                  <h4>Frameworks</h4>
-                  <ul>
-                    <li>Vulkan</li>
-                      <li>OpenGL</li>
-                      <li>Unity & Unreal 4</li>
-                      <li>CUDA</li>
-                  </ul>
-              </div>
-              <div class="col-md-3">
-                  <h4>Libraries</h4>
-                  <ul>
-                      <li>Pandas</li>
-                      <li>Numpy</li>
-                      <li>OpenCV</li>
-                      <li>Pytorch</li>
-                  </ul>
-              </div>
-              <div class="col-md-3">
-                  <h4>Skills</h4>
-                  <ul>
-                    <li>Realtime Rendering</li>
-                      <li>Realtime Filmmaking</li>
-                      <li>Image Processing</li>
-                      <li>Cloud (GCP, Azure DevOps)</li>
-                  </ul>
-              </div>
+        <h1 class="text-center">My Skills</h1>
+        <div class="row mt-5">
+          <div class="col-md-3">
+            <h4>Code</h4>
+            <ul>
+              <li>C/C++</li>
+              <li>C#</li>
+              <li>Python</li>
+            </ul>
           </div>
-      </div>
-  </section>
-
-    <section class="section featured-projects" data-sr>
-      <div class="section__title">Projects</div>
-      <div class="section__content">
-        <div class="project Ray">
-          <figure class="project__pic">
-            <a href="https://github.com/chikvi/RayTracing" target="_blank">
-              <img src="images/RayTracing.png" alt="RayTracing">
-            </a>
-          </figure>
-          <figcaption class="project__caption">
-            <div class="project__name">
-              <a target="_blank">
-                RayTracing: OpenGL</a>
-            </div>
-            <p>I have implemented RayTracing using GLADWalnut. <a href="https://github.com/chikvi/RayTracing" target="_blank">See (C/C++) source.</a></p>
-          </figcaption>
-        </div>
-	  <div class="project XDRM">
-          <figure class="project__pic">
-            <a href="https://github.com/chikvi/FacialAnimation" target="_blank">
-              <img src="images/blendshape.gif" alt="Blendshape FacialAnimation">
-            </a>
-          </figure>
-          <figcaption class="project__caption">
-            <div class="project__name">
-              <a href="https://youtu.be/CwiPwpqXATE" target="_blank">
-                Blendshape Facial Animation: OpenGL</a>
-            </div>
-            <p>I have implemented facial animation using Blendshapes. <a href="https://github.com/chikvi/FacialAnimation" target="_blank">See (C/C++) source.</a></p>
-          </figcaption>
-        </div>
-        <div class="project IBL">
-          <figure class="project__pic">
-            <a target="_blank">
-              <img src="images/IBLDemo.gif" alt="Image Based Lighting">
-            </a>
-          </figure>
-          <figcaption class="project__caption">
-            <div class="project__name">
-              <a target="_blank">Image Based Lighting: OpenGL Rendering</a>
-            </div>
-            <p>I created an Image-Based Lighting environment based on the implementation <a href="https://github.com/JoeyDeVries/LearnOpenGL/tree/master/src/6.pbr/2.2.2.ibl_specular_textured" target="_blank">here.</a></p>
-          </figcaption>
-        </div>
-        
-        <div class="project InstLife">
-          <figure class="project__pic">
-            <a href="https://github.com/chikvi/TransmittanceEffects" target="_blank">
-              <img src="images/reflection.png" alt="InstLife Banner">
-            </a>
-          </figure>
-          <figcaption class="project__caption">
-            <div class="project__name">
-              <a href="https://play.google.com/store/apps/details?id=com.instcoffee.instlife" target="_blank">OpenGL Rendering: Transmittance Effects</a>
-            </div>
-            <p>I created a small demo for showing the Transmittance Effects in graphics rendering pipeline (OpenGL). The transmittance effects include Reflection, Refraction, Chromatic Abberation and Fresnel Effects. <a href="https://github.com/rockchik/TransmittanceEffects" target="_blank">See (C/C++) source.</a> </p>
-          </figcaption>
-        </div>
-        <div class="project GTAV">
-          <figure class="project__pic">
-            <a href="https://github.com/chikvi/Bouncy" target="_blank">
-              <img src="images/bouncy.jpg">
-            </a>
-          </figure>
-          <figcaption class="project__caption">
-            <div class="project__name">
-              <a href="https://github.com/chikvi/Bouncy" target="_blank">Bouncy: Windows Game</a>
-            </div>
-            <p>Worked on a freelance project, created a small Unity Game called Bouncy. <a href="https://github.com/rockchik/Bouncy" target="_blank">See (C#) source.</a></p>
-          </figcaption>
-        </div>
-        <div class="project Solys">
-          <figure class="project__pic">
-            <a href="https://github.com/chikvi/ARCoreBunny" target="_blank">
-              <img src="images/bunny.gif" alt="BunnyQuest">
-            </a>
-          </figure>
-          <figcaption class="project__caption">
-            <div class="project__name">
-              <a target="_blank">BunnyQuest: ARCore Unity</a>
-            </div>
-            <p>An interactive kids game build using ARCore SDK in Unity. A puzzle game where the bunny has to reach the carrot farm by solving quiz. <a href="https://github.com/rockchik/ARCoreBunny" target="_blank">See (C#) source.</a></p>
-          </figcaption>
-        </div>
-        <div class="project DoctorWho">
-          <figure class="project__pic">
-            <a target="_blank">
-              <img src="images/CPM.png" alt="Doctor Who Banner">
-            </a>
-          </figure>
-          <figcaption class="project__caption">
-            <div class="project__name">
-              <a target="_blank">Pose Estimation</a>
-            </div>
-            <p>The objective of this project was to estimate the keypoints on the hands and analyze the hand gestures using Optical Flow.</p>
-          </figcaption>
-        </div>
-		<!-- <div class="project Cloth Transfer">
-          <figure class="project__pic">
-            <a target="_blank">
-              <img src="images/vTry.jpg" alt="Cloth Transfer">
-            </a>
-          </figure>
-          <figcaption class="project__caption">
-            <div class="project__name">
-              <a target="_blank">vCloth TryOn: Deep Learning</a>
-            </div>
-            <p>I was involved in a team to try virtual cloth tryOn using Deep Learning. <a href="https://github.com/andrewjong/SwapNet" target="_blank">Here</a> is the original implementation. <a href="https://modelle.com.au/" target="_blank">Modelle Australia</a></p>
-          </figcaption>
-        </div> -->
-		<div class="project videoToPose">
-          <figure class="project__pic">
-            <a target="_blank">
-              <img src="images/video2pose.gif" alt="Video2Pose">
-            </a>
-          </figure>
-          <figcaption class="project__caption">
-            <div class="project__name">
-              <a target="_blank">Video2Pose: Deep Learning</a>
-            </div>
-            <p>At <a href="https://vigastudios.com/" target="_blank">Viga Interactive</a>, we created a pipeline that helps animators to extract the 3D poses from videos. The pipeline includes 2D Pose Estimation and conversion of 2D to 3D latent space.</p>
-          </figcaption>
+          <div class="col-md-3">
+            <h4>Frameworks</h4>
+            <ul>
+              <li>Unity 2D & 3D</li>
+              <li>OpenGL</li>
+              <li>Vulkan</li>
+              <li>CUDA</li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h4>Libraries</h4>
+            <ul>
+              <li>Pandas</li>
+              <li>Numpy</li>
+              <li>OpenCV</li>
+              <li>Pytorch</li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h4>Skills</h4>
+            <ul>
+              <li>Realtime Rendering</li>
+              <li>Realtime Filmmaking</li>
+              <li>Physics, Maths</li>
+              <li>Image Processing</li>
+              <li>Cloud (GCP, Azure DevOps)</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
   <section class="projects-section">
-    <div class="container mt-5">
-        <h1 class="text-center">My Projects</h1>
-
-        <!-- Row 1 -->
-        <div class="row mt-4">
-            <!-- Column 1 (1 project) -->
-            <div class="col-md-6 mb-4">
-                <div class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="img/project1.gif" class="d-block w-100" alt="Project 1">
-                        </div>
-                    </div>
-                </div>
-                <h4>Project 1</h4>
-                <p>Description for Project 1. <a href="#">View Source</a></p>
+    <h2 class="section__title">Projects</h2>
+    <div class="projects-container">
+      <button class="scroll-button left" id="scrollLeft">←</button>
+      <div class="projects-wrapper" id="projectsWrapper">
+        <div class="projects-scroll" id="projectsScroll">
+          
+          <div class="project-card">
+            <img src="images/PullUPCount.gif" alt="PullUpCount" class="project-image">
+            <div class="project-content">
+              <h3 class="project-title">A2.AI - PullUPCount</h3>
+              <p class="project-description">One of the awesome <br> things we do at A2.AI.</p>
+              <a href="https://github.com/PixelSenseiAvi/FacialAnimation" class="project-link" target="_blank">View Source</a>
             </div>
-            <!-- Column 2 (2 projects) -->
-            <div class="col-md-6">
-                <!-- Project 2 -->
-                <div class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="img/project2.gif" class="d-block w-100" alt="Project 2">
-                        </div>
-                    </div>
-                </div>
-                <h4>Project 2</h4>
-                <p>Description for Project 2. <a href="#">View Source</a></p>
-
-                <!-- Project 3 -->
-                <div class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="img/project3.gif" class="d-block w-100" alt="Project 3">
-                        </div>
-                    </div>
-                </div>
-                <h4>Project 3</h4>
-                <p>Description for Project 3. <a href="#">View Source</a></p>
+          </div>
+          <div class="project-card">
+            <img src="images/blendshape.gif" alt="Facial Animation" class="project-image">
+            <div class="project-content">
+              <h3 class="project-title">Blendshape Facial Animation</h3>
+              <p class="project-description">Implemented facial animation using Blendshapes.</p>
+              <a href="https://github.com/PixelSenseiAvi/FacialAnimation" class="project-link" target="_blank">View Source</a>
             </div>
+          </div>
+          <div class="project-card">
+            <img src="images/reflection.png" alt="Transmittance Effects" class="project-image">
+            <div class="project-content">
+              <h3 class="project-title">Transmittance Effects</h3>
+              <p class="project-description">Demo for Reflection, Refraction, 
+                                            <br> and Fresnel Effects.</p>
+              <a href="https://github.com/PixelSenseiAvi/TransmittanceEffects" class="project-link" target="_blank">View
+                Source</a>
+            </div>
+          </div>'
+          <div class="project-card">
+            <img src="images/video2pose.gif" alt="Viga Studios: Video2Pose" class="project-image">
+            <div class="project-content">
+              <h3 class="project-title">Video2Pose: ViGA Interactive</h3>
+              <p class="project-description">The pipeline involves extracting 3D poses 
+                                            <br>from 2d frame sequences using Microft's
+                                            <br> 3D convolutional GAN architecture (2020).
+                                            <br>Then applying Kalman filters.
+                                                </p>
+              <a href="https://vigastudios.com/" class="project-link" target="_blank">View Source</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="images/IBLDemo.gif" alt="IBL Demo" class="project-image">
+            <div class="project-content">
+              <h3 class="project-title">Image Based Lighting</h3>
+              <p class="project-description">Created a youtube tutorial based <br>
+                                            on LearnOpenGL's Image-Based Lighting 
+                                            <br> environment in OpenGL.</p>
+              <a href="https://github.com/PixelSenseiAvi/PBRIBL" class="project-link" target="_blank">View Source</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="images/RayTracing.png" alt="RayTracing" class="project-image">
+            <div class="project-content">
+              <h3 class="project-title">Walnut (TheCherno) -> <br>GLADWalnut (PixelSenseiAvi)</h3>
+              <p class="project-description">Refactored and rewritten RayTracing framework (Walnut) <br> by TheCherno in OpenGL.</p>
+              <a href="https://github.com/PixelSenseiAvi/RayTracing" class="project-link" target="_blank">View Source</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="images/bunny.gif" alt="BunnyQuest" class="project-image">
+            <div class="project-content">
+              <h3 class="project-title">BunnyQuest: ARCore Unity</h3>
+              <p class="project-description">An interactive quiz game <br>
+                                        built using ARCore SDK in Unity.
+                                      <br>You will be provided a quiz <br>
+                                     at each level of this game.<br>
+                                     The bunny has to reach carrot farm.<br> </p>
+              <a href="https://github.com/PixelSenseiAvi/ARCoreBunny" class="project-link" target="_blank">View Source</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="images/bouncy.jpg" alt="Bouncy Game" class="project-image">
+            <div class="project-content">
+              <h3 class="project-title">Bouncy: Windows Game</h3>
+              <p class="project-description">A Unity game created as <br> a freelance project.</p>
+              <a href="https://github.com/PixelSenseiAvi/Bouncy" class="project-link" target="_blank">View Source</a>
+            </div>
+          </div>
+          
+          
         </div>
-
-        <!-- Row 2 -->
-        <div class="row mt-4">
-            <!-- Column 1 (1 project) -->
-            <div class="col-md-6 mb-4">
-                <div class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="img/project4.gif" class="d-block w-100" alt="Project 4">
-                        </div>
-                    </div>
-                </div>
-                <h4>Project 4</h4>
-                <p>Description for Project 4. <a href="#">View Source</a></p>
-            </div>
-            <!-- Column 2 (2 projects) -->
-            <div class="col-md-6">
-                <!-- Project 5 -->
-                <div class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="img/project5.gif" class="d-block w-100" alt="Project 5">
-                        </div>
-                    </div>
-                </div>
-                <h4>Project 5</h4>
-                <p>Description for Project 5. <a href="#">View Source</a></p>
-
-                <!-- Project 6 -->
-                <div class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="img/project6.gif" class="d-block w-100" alt="Project 6">
-                        </div>
-                    </div>
-                </div>
-                <h4>Project 6</h4>
-                <p>Description for Project 6. <a href="#">View Source</a></p>
-            </div>
-        </div>
-
-        <!-- Row 3 -->
-        <div class="row mt-4">
-            <!-- Column 1 (1 project) -->
-            <div class="col-md-6 mb-4">
-                <div class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="img/project7.gif" class="d-block w-100" alt="Project 7">
-                        </div>
-                    </div>
-                </div>
-                <h4>Project 7</h4>
-                <p>Description for Project 7. <a href="#">View Source</a></p>
-            </div>
-            <!-- Column 2 (1 project) -->
-            <div class="col-md-6">
-                <!-- Project 8 -->
-                <div class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="img/project8.gif" class="d-block w-100" alt="Project 8">
-                        </div>
-                    </div>
-                </div>
-                <h4>Project 8</h4>
-                <p>Description for Project 8. <a href="#">View Source</a></p>
-            </div>
-        </div>
+      </div>
+      <button class="scroll-button right" id="scrollRight">→</button>
     </div>
-</section>
+  </section>
 
-    <!-- <section class="section jam-projects" data-sr> -->
-      <!-- <div class="section__title">Other Projects</div> -->
-      <!-- <div class="section__content"> -->
-        <!-- <div class="project"> -->
-          <!-- <div class="project__name"> -->
-            <!-- <a href="https://joebrogers.itch.io/blossom" target="_blank" class="arrow-link">Blossom</a> -->
-          <!-- </div> -->
-          <!-- <p>An atmospheric, explorative retro-inspired puzzle platformer. In a silent landscape, explore the environment to -->
-            <!-- collect relics that will one-by-one restore life to the world through sound effects and instruments.</p> -->
-          <!-- <p>Developed in 72 hours for the -->
-            <!-- <a class="underline-link" href="https://itch.io/jam/gdl-january-jam/results" target="_blank">GDL January Jam</a>. The theme for the jam was -->
-            <!-- <strong>Silence</strong>. Art, Design and Code by me. Audio by the talented composer -->
-            <!-- <a class="underline-link" href="https://www.youtube.com/c/mortistar" target="_blank">Mortistar</a> -->
-          <!-- </p> -->
-          <!-- <p>Winner of the <a class="underline-link" href="https://www.kongregate.com/contest-winners/december-2018" target="_blank">Kongregate December 2018 Monthly Game Contest</a>. Placed 15th. -->
-          <!-- </p> -->
-        <!-- </div> -->
-        <!-- <div class="project"> -->
-          <!-- <div class="project__name"> -->
-            <!-- <a href="https://joebrogers.itch.io/slime-stars" target="_blank" class="arrow-link">Slime Stars</a> -->
-          <!-- </div> -->
-          <!-- <p>Slime Stars is a very small and colourful arcade puzzle-platformer. Play as a cute slime and jump your way to victory -->
-            <!-- by changing your quantum matter to navigate through jumping puzzles and reach the goal.</p> -->
-          <!-- <p>Developed in 14 hours for the -->
-            <!-- <a class="underline-link" href="https://itch.io/jam/gdl-quantum-jam/results" target="_blank">GDL October Game Jam</a>. The theme for the jam was -->
-            <!-- <strong>Quantum</strong>. Art, Design, Code and Audio by me.</p> -->
-        <!-- </div> -->
-      <!-- </div> -->
-    <!-- </section> -->
+  <!-- <section class="section jam-projects" data-sr> -->
+  <!-- <div class="section__title">Other Projects</div> -->
+  <!-- <div class="section__content"> -->
+  <!-- <div class="project"> -->
+  <!-- <div class="project__name"> -->
+  <!-- <a href="https://joebrogers.itch.io/blossom" target="_blank" class="arrow-link">Blossom</a> -->
+  <!-- </div> -->
+  <!-- <p>An atmospheric, explorative retro-inspired puzzle platformer. In a silent landscape, explore the environment to -->
+  <!-- collect relics that will one-by-one restore life to the world through sound effects and instruments.</p> -->
+  <!-- <p>Developed in 72 hours for the -->
+  <!-- <a class="underline-link" href="https://itch.io/jam/gdl-january-jam/results" target="_blank">GDL January Jam</a>. The theme for the jam was -->
+  <!-- <strong>Silence</strong>. Art, Design and Code by me. Audio by the talented composer -->
+  <!-- <a class="underline-link" href="https://www.youtube.com/c/mortistar" target="_blank">Mortistar</a> -->
+  <!-- </p> -->
+  <!-- <p>Winner of the <a class="underline-link" href="https://www.kongregate.com/contest-winners/december-2018" target="_blank">Kongregate December 2018 Monthly Game Contest</a>. Placed 15th. -->
+  <!-- </p> -->
+  <!-- </div> -->
+  <!-- <div class="project"> -->
+  <!-- <div class="project__name"> -->
+  <!-- <a href="https://joebrogers.itch.io/slime-stars" target="_blank" class="arrow-link">Slime Stars</a> -->
+  <!-- </div> -->
+  <!-- <p>Slime Stars is a very small and colourful arcade puzzle-platformer. Play as a cute slime and jump your way to victory -->
+  <!-- by changing your quantum matter to navigate through jumping puzzles and reach the goal.</p> -->
+  <!-- <p>Developed in 14 hours for the -->
+  <!-- <a class="underline-link" href="https://itch.io/jam/gdl-quantum-jam/results" target="_blank">GDL October Game Jam</a>. The theme for the jam was -->
+  <!-- <strong>Quantum</strong>. Art, Design, Code and Audio by me.</p> -->
+  <!-- </div> -->
+  <!-- </div> -->
+  <!-- </section> -->
 
-    <!-- <section class="section assets" data-sr> -->
-      <!-- <div class="section__title">Free Assets</div> -->
-      <!-- <div class="section__content"> -->
-        <!-- <div class="project"> -->
-          <!-- <div class="project__name"> -->
-            <!-- <a href="https://joebrogers.itch.io/bitpotion" target="_blank" class="arrow-link">BitPotion</a> -->
-          <!-- </div> -->
-          <!-- <p>BitPotion is a cute 4x7 pixel font available for both commercial and non-commercial use under the -->
-            <!-- <a class="underline-link" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-BY</a> license.</p> -->
-        <!-- </div> -->
-        <!-- <div class="project"> -->
-          <!-- <div class="project__name"> -->
-            <!-- <a href="https://assetstore.unity.com/packages/tools/utilities/scriptfinder-119055" target="_blank" class="arrow-link">ScriptFinder</a> -->
-          <!-- </div> -->
-          <!-- <p>ScriptFinder is a Unity editor extension to quickly find all references and dependencies of a target script within your project.</p> -->
-        <!-- </div> -->
-        <!-- <div class="project"> -->
-          <!-- <div class="project__name"> -->
-            <!-- <a href="https://joebrogers.itch.io/directoryapp" target="_blank" class="arrow-link">Directory</a> -->
-          <!-- </div> -->
-          <!-- <p>Directory is a lightweight utility to template project structures and simplify the process of starting new projects, -->
-            <!-- as well as help you stay organised.</p> -->
-        <!-- </div> -->
-        <!-- <div class="project"> -->
-          <!-- <div class="project__name"> -->
-            <!-- <a href="https://github.com/JoebRogers/PICO-EC" target="_blank" class="arrow-link">PICO-EC</a> -->
-          <!-- </div> -->
-          <!-- <p>A tiny scene-entity-component library created for the PICO-8 fantasty console.</p> -->
-          <!-- <p>For the API Docs, you can head <a class="underline-link" href="https://joebrogers.com/Libraries/PICO-EC/API/1.0/" target="_blank">here.</a></p> -->
-        <!-- </div> -->
-        <!-- <div class="project"> -->
-          <!-- <div class="project__name"> -->
-            <!-- <a href="https://github.com/JoebRogers/PICO-Tween" target="_blank" class="arrow-link">PICO-Tween</a> -->
-          <!-- </div> -->
-          <!-- <p>A small library of tweening/easing functions for use in the PICO-8 fantasy console, inspired by Robert Penner's easing functions.</p> -->
-        <!-- </div> -->
-        <!-- <div class="project"> -->
-          <!-- <div class="project__name"> -->
-            <!-- <a href="https://github.com/JoebRogers/PICO-TweenMachine" target="_blank" class="arrow-link">PICO-TweenMachine</a> -->
-          <!-- </div> -->
-          <!-- <p>A small wrapper library for the PICO-8 fantasy console, meant as an extension to the PICO-Tween easing library.</p> -->
-          <!-- <p>For the API Docs, you can head <a class="underline-link" href="https://joebrogers.com/Libraries/PICO-Tween-Machine/API/1.0/" target="_blank">here.</a></p> -->
-        <!-- </div> -->
-      <!-- </div>       -->
-    <!-- </section> -->
+  <!-- <section class="section assets" data-sr> -->
+  <!-- <div class="section__title">Free Assets</div> -->
+  <!-- <div class="section__content"> -->
+  <!-- <div class="project"> -->
+  <!-- <div class="project__name"> -->
+  <!-- <a href="https://joebrogers.itch.io/bitpotion" target="_blank" class="arrow-link">BitPotion</a> -->
+  <!-- </div> -->
+  <!-- <p>BitPotion is a cute 4x7 pixel font available for both commercial and non-commercial use under the -->
+  <!-- <a class="underline-link" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-BY</a> license.</p> -->
+  <!-- </div> -->
+  <!-- <div class="project"> -->
+  <!-- <div class="project__name"> -->
+  <!-- <a href="https://assetstore.unity.com/packages/tools/utilities/scriptfinder-119055" target="_blank" class="arrow-link">ScriptFinder</a> -->
+  <!-- </div> -->
+  <!-- <p>ScriptFinder is a Unity editor extension to quickly find all references and dependencies of a target script within your project.</p> -->
+  <!-- </div> -->
+  <!-- <div class="project"> -->
+  <!-- <div class="project__name"> -->
+  <!-- <a href="https://joebrogers.itch.io/directoryapp" target="_blank" class="arrow-link">Directory</a> -->
+  <!-- </div> -->
+  <!-- <p>Directory is a lightweight utility to template project structures and simplify the process of starting new projects, -->
+  <!-- as well as help you stay organised.</p> -->
+  <!-- </div> -->
+  <!-- <div class="project"> -->
+  <!-- <div class="project__name"> -->
+  <!-- <a href="https://github.com/JoebRogers/PICO-EC" target="_blank" class="arrow-link">PICO-EC</a> -->
+  <!-- </div> -->
+  <!-- <p>A tiny scene-entity-component library created for the PICO-8 fantasty console.</p> -->
+  <!-- <p>For the API Docs, you can head <a class="underline-link" href="https://joebrogers.com/Libraries/PICO-EC/API/1.0/" target="_blank">here.</a></p> -->
+  <!-- </div> -->
+  <!-- <div class="project"> -->
+  <!-- <div class="project__name"> -->
+  <!-- <a href="https://github.com/JoebRogers/PICO-Tween" target="_blank" class="arrow-link">PICO-Tween</a> -->
+  <!-- </div> -->
+  <!-- <p>A small library of tweening/easing functions for use in the PICO-8 fantasy console, inspired by Robert Penner's easing functions.</p> -->
+  <!-- </div> -->
+  <!-- <div class="project"> -->
+  <!-- <div class="project__name"> -->
+  <!-- <a href="https://github.com/JoebRogers/PICO-TweenMachine" target="_blank" class="arrow-link">PICO-TweenMachine</a> -->
+  <!-- </div> -->
+  <!-- <p>A small wrapper library for the PICO-8 fantasy console, meant as an extension to the PICO-Tween easing library.</p> -->
+  <!-- <p>For the API Docs, you can head <a class="underline-link" href="https://joebrogers.com/Libraries/PICO-Tween-Machine/API/1.0/" target="_blank">here.</a></p> -->
+  <!-- </div> -->
+  <!-- </div>       -->
+  <!-- </section> -->
 
-    <footer class="footer">
-      <div class="footer__copyright">
-        <div class="top">
-          <span>Developed by Avi Garg | 2019</span>
-        </div>
-        <div class="bottom">
-          <span>Inspired by Joe Rogers, Brittany Chiang</span>
-        </div>
+  <footer class="footer">
+    <div class="footer__copyright">
+      <div class="top">
+        <span>Developed by Avi Garg | 2019</span>
       </div>
-      <div class="footer__links">
-        <a href="mailto:a7vi1912@gmail.com" target="_blank" title="email">
-          <span class="text">email</span>
-          <i class="fas fa-envelope"></i>
-          <img src="images/itchio.svg" alt="twitter"> </a>
-        <a href="https://twitter.com/chik_avi" target="_blank" title="twitter">
-          <span class="text">twitter</span>
-          <i class="fab fa-twitter"></i>
-          <img src="images/itchio.svg" alt="twitter"> </a>
-        <a href="https://github.com/rockchik" target="_blank" title="github">
-          <span class="text">github</span>
-          <i class="fab fa-github"></i>
-          <img src="images/itchio.svg" alt="twitter"> </a>
-        <a href="https://www.linkedin.com/in/gargavi" target="_blank" title="linkedin">
-          <span class="text">linkedin</span>
-          <i class="fab fa-linkedin"></i>
-          <img src="images/itchio.svg" alt="twitter"> </a>
+      <div class="bottom">
+        <span>Inspired by Joe Rogers, Brittany Chiang</span>
       </div>
-    </footer>
+    </div>
+    <div class="footer__links">
+      <a href="mailto:a7vi1912@gmail.com" target="_blank" title="email">
+        <span class="text">email</span>
+        <i class="fas fa-envelope"></i>
+        <img src="images/itchio.svg" alt="twitter"> </a>
+      <a href="https://twitter.com/chik_avi" target="_blank" title="twitter">
+        <span class="text">twitter</span>
+        <i class="fab fa-twitter"></i>
+        <img src="images/itchio.svg" alt="twitter"> </a>
+      <a href="https://github.com/PixelSenseiAvi" target="_blank" title="github">
+        <span class="text">github</span>
+        <i class="fab fa-github"></i>
+        <img src="images/itchio.svg" alt="twitter"> </a>
+      <a href="https://www.linkedin.com/in/gargavi" target="_blank" title="linkedin">
+        <span class="text">linkedin</span>
+        <i class="fab fa-linkedin"></i>
+        <img src="images/itchio.svg" alt="twitter"> </a>
+    </div>
+  </footer>
 
-    <button id="top-button" style="display: inline-block;">
-      <img src="" alt=""> </button>
+  <button id="top-button" style="display: inline-block;">
+    <img src="" alt=""> </button>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"
+    charset="utf-8"></script>
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
   <script src="js/main.js" type="text/javascript" charset="utf-8"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
