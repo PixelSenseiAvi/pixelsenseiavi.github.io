@@ -15,24 +15,6 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-      const wrapper = document.getElementById('projectsWrapper');
-      const scroll = document.getElementById('projectsScroll');
-      const buttonLeft = document.getElementById('scrollLeft');
-      const buttonRight = document.getElementById('scrollRight');
-      const scrollAmount = 300;
-
-      buttonLeft.addEventListener('click', () => {
-          wrapper.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-      });
-
-      buttonRight.addEventListener('click', () => {
-          wrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-      });
-  });
-</script>
-
 <body>
   <div id="site">
     <header class="intro">
@@ -252,8 +234,8 @@
               </div>
             </div>
             <div class="project-content">
-              <span class="project-tag">ARCore</span>
               <span class="project-tag">Unity</span>
+              <span class="project-tag">ARCore</span>
               <h3 class="project-title">BunnyQuest: ARCore Unity</h3>
               <div class="project-description-wrapper">
                 <p class="project-description">An interactive quiz game built using ARCore SDK in Unity.</p>
@@ -378,20 +360,59 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Existing scroll functionality
+        // Project carousel scrolling functionality
         const wrapper = document.getElementById('projectsWrapper');
         const scroll = document.getElementById('projectsScroll');
         const buttonLeft = document.getElementById('scrollLeft');
         const buttonRight = document.getElementById('scrollRight');
-        const scrollAmount = 300;
+        const scrollAmount = 600;
+        let autoScrollInterval;
+        let autoScrollTimer;
+        const autoScrollDelay = 25000; // 25 seconds
 
         buttonLeft.addEventListener('click', () => {
             wrapper.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            resetAutoScroll();
         });
 
         buttonRight.addEventListener('click', () => {
             wrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            resetAutoScroll();
         });
+
+        // Auto scroll function
+        function startAutoScroll() {
+            autoScrollInterval = setInterval(() => {
+                // Check if we're near the end of the scroll area
+                if (wrapper.scrollLeft + wrapper.clientWidth >= scroll.scrollWidth - 100) {
+                    // If at the end, scroll back to the beginning
+                    wrapper.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    // Otherwise, continue scrolling
+                    wrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                }
+            }, 5000); // Scroll every 5 seconds once auto-scroll is activated
+        }
+
+        // Reset auto scroll timer
+        function resetAutoScroll() {
+            // Clear existing timers and intervals
+            clearTimeout(autoScrollTimer);
+            clearInterval(autoScrollInterval);
+            
+            // Set a new timer
+            autoScrollTimer = setTimeout(() => {
+                startAutoScroll();
+            }, autoScrollDelay);
+        }
+
+        // Initialize auto scroll
+        resetAutoScroll();
+
+        // Reset auto scroll on user interaction with the project section
+        wrapper.addEventListener('mouseover', resetAutoScroll);
+        wrapper.addEventListener('touchstart', resetAutoScroll);
+        wrapper.addEventListener('scroll', resetAutoScroll);
         
         // Add hover effects for project cards
         const projectCards = document.querySelectorAll('.project-card');
@@ -402,6 +423,7 @@
                 if (overlay) {
                     overlay.style.opacity = '1';
                 }
+                resetAutoScroll();
             });
             
             card.addEventListener('mouseleave', () => {
@@ -429,6 +451,8 @@
                     fadeElement.style.display = 'none';
                     this.textContent = 'Read Less';
                 }
+                
+                resetAutoScroll();
             });
         });
         
