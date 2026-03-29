@@ -30,7 +30,7 @@
 
 .project-card {
   flex: 0 0 auto;
-  width: 320px;
+  width: 260px;
   margin: 0 15px;
   border-radius: 8px;
   overflow: hidden;
@@ -236,7 +236,7 @@
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
   .project-card {
-    width: 280px;
+    width: 240px;
   }
   
   .scroll-button {
