@@ -49,7 +49,7 @@
 
 .project-image-container {
   position: relative;
-  height: 340px; /* Nearly full card height */
+  height: 275px; /* Nearly full card height */
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -57,7 +57,7 @@
 .project-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.5s ease;
 }
 
