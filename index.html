@@ -1,40 +1,50 @@
 <!doctype html>
-
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ac3232">
 
-  <title>Avi Garg</title>
-  <meta name="description" content="Portfolio site for graphics programmer Avi Garg.">
+  <title>Avi Garg — Creative Software Developer</title>
+  <meta name="description" content="Portfolio of Avi Garg — creative software developer working at the intersection of graphics, AI and immersive technologies.">
   <meta name="author" content="Avi Garg">
 
+  <meta property="og:title" content="Avi Garg — Creative Software Developer">
+  <meta property="og:description" content="Portfolio of Avi Garg — graphics, AI, and immersive technologies.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/avi.jpg">
+
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="preload" as="image" href="images/avi.jpg">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/projects.css">
   <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
-  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 
 <body>
   <div id="site">
+    <div class="accent-bar" aria-hidden="true"></div>
+
     <header class="intro">
-      <h1 class="intro__hello">Howdy!</h1>
+      <h1 class="intro__hello">Howdy<span class="wave" aria-hidden="true">👋</span></h1>
       <div class="intro__wrap">
-        <img class="intro__icon" src="images/avi.jpg" alt="Brand Icon" />
+        <img class="intro__icon" src="images/avi.jpg" alt="Portrait of Avi Garg" width="200" height="200" decoding="async" />
         <h2 class="intro__tagline">I am
           <span class="name">Avi Garg</span> — a creative software developer
           passionate about immersive technologies at the intersection of Graphics and AI.
-          My work bridges interactivity, intelligent systems, and visual design, from AR/VR
+          My work bridges interactivity, intelligent systems, and visual design — from AR/VR
           experiences to AI-driven tools that respond to human input. I love shaping digital
           environments where ideas come alive — using code not just to build, but to delight,
           engage, and inspire.
-
         </h2>
       </div>
       <h3 class="intro__contact">Got an interesting project? Send me a message at
-        <span>
-          <a href="mailto:gargav@tcd.ie" target="_blank" class="highlight-link">gargav@tcd.ie</a>
-        </span>
+        <a href="mailto:gargav@tcd.ie" class="highlight-link">gargav@tcd.ie</a>
       </h3>
     </header>
 
@@ -42,72 +52,63 @@
       <div class="section__title">
         Background
         <br>
-        <img class="section__background__portrait" src="images/Icon_Potion.gif" alt="Potion" />
+        <img class="section__background__portrait" src="images/Icon_Potion.gif" alt="" width="65" height="100" loading="lazy" decoding="async" />
       </div>
       <div class="section__content">
-        <p>I'm a software developer specialization in Computer Graphics and Image Processing. I'm currently based in
-          <strong>INDIA</strong> and hold an post-graduate degree in
+        <p>I'm a software developer specializing in Computer Graphics and Image Processing. I'm currently based in
+          <strong>India</strong> and hold a post-graduate degree in
           <a class="underline-link" href="https://www.tcd.ie/courses/postgraduate/az/course.php?id=DPTCS-AVRE-1F09"
-            target="_blank">Computer Science - Graphics and Vision technologies</a> from <a class="underline-link"
-            href="https://www.tcd.ie/" target="_blank">Trinity College Dublin</a>. I have gained diverse experience
-          using C/C++ and Unity across various Immersive technologies with organizations like
-          <a class="underline-link" href="https://vigastudios.com/" target="_blank">Viga Studios</a>,
-          <a class="underline-link" href="https://modelworks.ie/" target="_blank">Modelworks Studios</a>,
-          <a class="underline-link" href="https://fev.com/" target="_blank">FEV</a>.
-          <a class="underline-link" href="https://www.a2ai.com.au/" target="_blank">A2.AI</a>.
+            target="_blank" rel="noopener">Computer Science — Graphics and Vision technologies</a> from
+          <a class="underline-link" href="https://www.tcd.ie/" target="_blank" rel="noopener">Trinity College Dublin</a>.
+          I have gained diverse experience using C/C++ and Unity across various immersive technologies with organizations like
+          <a class="underline-link" href="https://vigastudios.com/" target="_blank" rel="noopener">Viga Studios</a>,
+          <a class="underline-link" href="https://modelworks.ie/" target="_blank" rel="noopener">Modelworks Studios</a>,
+          <a class="underline-link" href="https://fev.com/" target="_blank" rel="noopener">FEV</a>, and
+          <a class="underline-link" href="https://www.a2ai.com.au/" target="_blank" rel="noopener">A2.AI</a>.
         </p>
-        <p>I love engaging with new technologies, people and challenges - it's the fuel for my continous learning and
+        <p>I love engaging with new technologies, people and challenges — it's the fuel for my continuous learning and
           growth. My expertise spans Physics, Rendering Algorithms, Image Processing, and neural network
           development.</p>
-        <p>
-
-          <strong>Always eager for innovative projects and exciting opportunities, so don't hestitate to get in
-            touch.</strong>
-        </p>
+        <p><strong>Always eager for innovative projects and exciting opportunities, so don't hesitate to get in touch.</strong></p>
       </div>
     </section>
 
-
-
     <section class="projects-section">
-      <h2 class="section__title">Featured Projects</h2>
+      <h2 class="section__title section__title--center">Featured Projects</h2>
       <div class="projects-container">
-        <button class="scroll-button left" id="scrollLeft">←</button>
+        <button class="scroll-button left" id="scrollLeft" aria-label="Scroll projects left">←</button>
         <div class="projects-wrapper" id="projectsWrapper">
           <div class="projects-scroll" id="projectsScroll">
 
-            <div class="project-card">
+            <article class="project-card">
               <div class="project-image-container">
-                <img src="images/SmartEnemyAI.gif" alt="Smart Enemy AI" class="project-image">
+                <img src="images/SmartEnemyAI.gif" alt="Smart Enemy AI gameplay" class="project-image" loading="lazy" decoding="async">
                 <div class="project-overlay">
-                  <a href="" class="view-project" target="_blank">View Project</a>
+                  <a href="https://github.com/PixelSenseiAvi/SmartEnemyAI" class="view-project" target="_blank" rel="noopener">View Project</a>
                 </div>
               </div>
               <div class="project-content">
                 <div class="project-tags">
                   <span class="project-tag">Unreal Engine 5</span>
-                  <span class="project-tag">EnemyAI</span>
+                  <span class="project-tag">Enemy AI</span>
                 </div>
                 <h3 class="project-title">Combat Third Person AI</h3>
                 <div class="project-description-wrapper">
-                  <p class="project-description">Created a sophisticated combat AI <br> for a third-person game using
-                    <br> Unreal Engine 5.</p>
+                  <p class="project-description">Created a sophisticated combat AI for a third-person game using Unreal Engine 5.</p>
                   <div class="fade-bottom"></div>
                   <span class="read-more">Read More</span>
                 </div>
                 <div class="project-links">
-                  <a href="https://github.com/PixelSenseiAvi/SmartEnemyAI" class="project-link" target="_blank">View
-                    Source</a>
+                  <a href="https://github.com/PixelSenseiAvi/SmartEnemyAI" class="project-link" target="_blank" rel="noopener">View Source</a>
                 </div>
               </div>
-            </div>
+            </article>
 
-            <div class="project-card">
+            <article class="project-card">
               <div class="project-image-container">
-                <img src="images/modelworks.gif" alt="modelworks" class="project-image">
+                <img src="images/modelworks.gif" alt="Modelworks interactive portfolio" class="project-image" loading="lazy" decoding="async">
                 <div class="project-overlay">
-                  <a href="https://modelworks.studio/interactive-portfolio" class="view-project" target="_blank">View
-                    Project</a>
+                  <a href="https://modelworks.studio/interactive-portfolio" class="view-project" target="_blank" rel="noopener">View Project</a>
                 </div>
               </div>
               <div class="project-content">
@@ -117,210 +118,192 @@
                 </div>
                 <h3 class="project-title">Modelworks, Dublin 🇮🇪</h3>
                 <div class="project-description-wrapper">
-                  <p class="project-description">One of the awesome things we do at <br>Modelworks.</p>
+                  <p class="project-description">One of the awesome things we do at Modelworks.</p>
                   <div class="fade-bottom"></div>
                   <span class="read-more">Read More</span>
                 </div>
                 <div class="project-links">
-                  <a href="https://modelworks.studio/interactive-portfolio" class="project-link" target="_blank">Learn
-                    More</a>
+                  <a href="https://modelworks.studio/interactive-portfolio" class="project-link" target="_blank" rel="noopener">Learn More</a>
                 </div>
               </div>
-            </div>
+            </article>
 
-            <div class="project-card">
+            <article class="project-card">
               <div class="project-image-container">
-                <img src="images/blendshape.gif" alt="Facial Animation" class="project-image">
+                <img src="images/blendshape.gif" alt="Facial animation blendshapes demo" class="project-image" loading="lazy" decoding="async">
                 <div class="project-overlay">
-                  <a href="https://github.com/PixelSenseiAvi/FacialAnimation" class="view-project" target="_blank">View
-                    Source</a>
-                </div>
-              </div>
-              <div class="project-content">
-                <span class="project-tag">C++</span>
-                <h3 class="project-title">Blendshape Facial Animation</h3>
-                <div class="project-description-wrapper">
-                  <p class="project-description">Implemented facial animation in C++ <br>using Blendshapes.</p>
-                  <div class="fade-bottom"></div>
-                  <span class="read-more">Read More</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://github.com/PixelSenseiAvi/FacialAnimation" class="project-link" target="_blank">View
-                    Source</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-card">
-              <div class="project-image-container">
-                <img src="images/YesChef!-Gameplay.gif" alt="YesChef! Game" class="project-image">
-                <div class="project-overlay">
-                  <a href="https://github.com/PixelSenseiAvi/" class="view-project" target="_blank">View
-                    Source</a>
-                </div>
-              </div>
-              <div class="project-content">
-                <span class="project-tag">Unity</span>
-                <span class="project-tag">2.5D</span>
-                <h3 class="project-title">YesChef!</h3>
-                <div class="project-description-wrapper">
-                  <p class="project-description"> 2.5D game</p>
-                  <div class="fade-bottom"></div>
-                  <span class="read-more">Read More</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://github.com/PixelSenseiAvi/" class="project-link" target="_blank">View
-                    Source</a>
-                </div>
-              </div>
-            </div>
-
-            
-
-            <div class="project-card">
-              <div class="project-image-container">
-                <img src="images/reflection.png" alt="Transmittance Effects" class="project-image">
-                <div class="project-overlay">
-                  <a href="https://github.com/PixelSenseiAvi/TransmittanceEffects" class="view-project"
-                    target="_blank">View Source</a>
+                  <a href="https://github.com/PixelSenseiAvi/FacialAnimation" class="view-project" target="_blank" rel="noopener">View Source</a>
                 </div>
               </div>
               <div class="project-content">
                 <div class="project-tags">
-
-                <span class="project-tag">OpenGL</span>
-                <span class="project-tag">GLSL</span>
+                  <span class="project-tag">C++</span>
                 </div>
-                <h3 class="project-title">Transmittance Effects</h3>
+                <h3 class="project-title">Blendshape Facial Animation</h3>
                 <div class="project-description-wrapper">
-                  <p class="project-description">Demo for Reflection, Refraction, and <br>Fresnel Effects.</p>
+                  <p class="project-description">Implemented facial animation in C++ using Blendshapes.</p>
                   <div class="fade-bottom"></div>
                   <span class="read-more">Read More</span>
                 </div>
                 <div class="project-links">
-                  <a href="https://github.com/PixelSenseiAvi/TransmittanceEffects" class="project-link"
-                    target="_blank">View Source</a>
+                  <a href="https://github.com/PixelSenseiAvi/FacialAnimation" class="project-link" target="_blank" rel="noopener">View Source</a>
                 </div>
               </div>
-            </div>
+            </article>
 
-            <div class="project-card">
+            <article class="project-card">
               <div class="project-image-container">
-                <img src="images/Avataar.gif" alt="Avataar LipSync" class="project-image">
+                <img src="images/YesChef!-Gameplay.gif" alt="YesChef! gameplay" class="project-image" loading="lazy" decoding="async">
+                <div class="project-overlay">
+                  <a href="https://github.com/PixelSenseiAvi/YesChef-" class="view-project" target="_blank" rel="noopener">View Source</a>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-tags">
+                  <span class="project-tag">Unity</span>
+                  <span class="project-tag">2.5D</span>
+                </div>
+                <h3 class="project-title">YesChef!</h3>
+                <div class="project-description-wrapper">
+                  <p class="project-description">A 2.5D cooking arcade game built in Unity.</p>
+                  <div class="fade-bottom"></div>
+                  <span class="read-more">Read More</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/PixelSenseiAvi/YesChef-" class="project-link" target="_blank" rel="noopener">View Source</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-image-container">
+                <img src="images/reflection.png" alt="Transmittance effects render" class="project-image" loading="lazy" decoding="async">
+                <div class="project-overlay">
+                  <a href="https://github.com/PixelSenseiAvi/TransmittanceEffects" class="view-project" target="_blank" rel="noopener">View Source</a>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-tags">
+                  <span class="project-tag">OpenGL</span>
+                  <span class="project-tag">GLSL</span>
+                </div>
+                <h3 class="project-title">Transmittance Effects</h3>
+                <div class="project-description-wrapper">
+                  <p class="project-description">Demo for Reflection, Refraction, and Fresnel Effects.</p>
+                  <div class="fade-bottom"></div>
+                  <span class="read-more">Read More</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/PixelSenseiAvi/TransmittanceEffects" class="project-link" target="_blank" rel="noopener">View Source</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-image-container">
+                <img src="images/Avataar.gif" alt="3D Avataar Salsa LipSync demo" class="project-image" loading="lazy" decoding="async">
                 <div class="project-overlay">
                   <a href="#" class="view-project">View Details</a>
                 </div>
               </div>
               <div class="project-content">
                 <div class="project-tags">
-
-                <span class="project-tag">Unity</span>
-                <span class="project-tag">AI</span>
+                  <span class="project-tag">Unity</span>
+                  <span class="project-tag">AI</span>
                 </div>
-                <h3 class="project-title">3D Avataar - Salsa LipSync</h3>
+                <h3 class="project-title">3D Avataar — Salsa LipSync</h3>
                 <div class="project-description-wrapper">
-                  <p class="project-description">Avataar + Salsa LipSync + OpenAI TTS</p>
+                  <p class="project-description">Avataar + Salsa LipSync + OpenAI TTS.</p>
                   <div class="fade-bottom"></div>
                   <span class="read-more">Read More</span>
                 </div>
               </div>
-            </div>
+            </article>
 
-            <div class="project-card">
+            <article class="project-card">
               <div class="project-image-container">
-                <img src="images/NewAppOverview.gif" alt="PullUpCount" class="project-image">
+                <img src="images/NewAppOverview.gif" alt="A2.AI rep counting demo" class="project-image" loading="lazy" decoding="async">
                 <div class="project-overlay">
-                  <a href="https://www.a2ai.com.au/" class="view-project" target="_blank">View Project</a>
+                  <a href="https://www.a2ai.com.au/" class="view-project" target="_blank" rel="noopener">View Project</a>
                 </div>
               </div>
               <div class="project-content">
                 <div class="project-tags">
-                <span class="project-tag">Unity</span>
-                <span class="project-tag">AI</span>
+                  <span class="project-tag">Unity</span>
+                  <span class="project-tag">AI</span>
                 </div>
                 <h3 class="project-title">A2.AI, Australia 🇦🇺</h3>
                 <div class="project-description-wrapper">
-                  <p class="project-description">Rep Counting & Pose Correction pipeline</p>
+                  <p class="project-description">Rep Counting & Pose Correction pipeline.</p>
                   <div class="fade-bottom"></div>
                   <span class="read-more">Read More</span>
                 </div>
                 <div class="project-links">
-                  <a href="https://www.a2ai.com.au/" class="project-link" target="_blank">Learn More</a>
+                  <a href="https://www.a2ai.com.au/" class="project-link" target="_blank" rel="noopener">Learn More</a>
                 </div>
               </div>
-            </div>
+            </article>
 
-
-            <div class="project-card">
+            <article class="project-card">
               <div class="project-image-container">
-                <img src="images/video2pose.gif" alt="Viga Studios: Video2Pose" class="project-image">
+                <img src="images/video2pose.gif" alt="Video2Pose pipeline preview" class="project-image" loading="lazy" decoding="async">
                 <div class="project-overlay">
-                  <a href="https://vigastudios.com/" class="view-project" target="_blank">Learn More</a>
+                  <a href="https://vigastudios.com/" class="view-project" target="_blank" rel="noopener">Learn More</a>
                 </div>
               </div>
               <div class="project-content">
                 <div class="project-tags">
-
-                <span class="project-tag">Computer Vision</span>
-                <span class="project-tag">GAN</span>
+                  <span class="project-tag">Computer Vision</span>
+                  <span class="project-tag">GAN</span>
                 </div>
                 <h3 class="project-title">Video2Pose: ViGA Interactive</h3>
                 <div class="project-description-wrapper">
-                  <p class="project-description">The pipeline involves extracting 3D poses <br>from 2D frame sequences
-                    using Microsoft's <br>3D convolutional GAN architecture (2020).</p>
+                  <p class="project-description">The pipeline extracts 3D poses from 2D frame sequences using Microsoft's 3D convolutional GAN architecture (2020).</p>
                   <div class="fade-bottom"></div>
                   <span class="read-more">Read More</span>
                 </div>
                 <div class="project-links">
-                  <a href="https://vigastudios.com/" class="project-link" target="_blank">Learn More</a>
+                  <a href="https://vigastudios.com/" class="project-link" target="_blank" rel="noopener">Learn More</a>
                 </div>
               </div>
-            </div>
+            </article>
 
-            <div class="project-card">
+            <article class="project-card">
               <div class="project-image-container">
-                <img src="images/IBLDemo.gif" alt="IBL Demo" class="project-image">
+                <img src="images/IBLDemo.gif" alt="Image based lighting demo" class="project-image" loading="lazy" decoding="async">
                 <div class="project-overlay">
-                  <a href="https://github.com/PixelSenseiAvi/PBRIBL" class="view-project" target="_blank">View
-                    Source</a>
+                  <a href="https://github.com/PixelSenseiAvi/PBRIBL" class="view-project" target="_blank" rel="noopener">View Source</a>
                 </div>
               </div>
               <div class="project-content">
                 <div class="project-tags">
-
-                <span class="project-tag">PBR</span>
-                <span class="project-tag">IBL</span>
+                  <span class="project-tag">PBR</span>
+                  <span class="project-tag">IBL</span>
+                </div>
                 <h3 class="project-title">Image Based Lighting</h3>
-                </div>
                 <div class="project-description-wrapper">
-                  <p class="project-description">Created a YouTube tutorial based on <br>LearnOpenGL's Image-Based
-                    Lighting <br>environment</p>
+                  <p class="project-description">Created a YouTube tutorial based on LearnOpenGL's Image-Based Lighting environment.</p>
                   <div class="fade-bottom"></div>
                   <span class="read-more">Read More</span>
                 </div>
                 <div class="project-links">
-                  <a href="https://github.com/PixelSenseiAvi/PBRIBL" class="project-link" target="_blank">View
-                    Source</a>
+                  <a href="https://github.com/PixelSenseiAvi/PBRIBL" class="project-link" target="_blank" rel="noopener">View Source</a>
                 </div>
               </div>
-            </div>
+            </article>
 
-            <div class="project-card">
+            <article class="project-card">
               <div class="project-image-container">
-                <img src="images/bunny.gif" alt="BunnyQuest" class="project-image">
+                <img src="images/bunny.gif" alt="BunnyQuest ARCore demo" class="project-image" loading="lazy" decoding="async">
                 <div class="project-overlay">
-                  <a href="https://github.com/PixelSenseiAvi/ARCoreBunny" class="view-project" target="_blank">View
-                    Source</a>
+                  <a href="https://github.com/PixelSenseiAvi/ARCoreBunny" class="view-project" target="_blank" rel="noopener">View Source</a>
                 </div>
               </div>
               <div class="project-content">
                 <div class="project-tags">
-
-                <span class="project-tag">Unity</span>
-                <span class="project-tag">ARCore</span>
+                  <span class="project-tag">Unity</span>
+                  <span class="project-tag">ARCore</span>
                 </div>
-
-              
                 <h3 class="project-title">BunnyQuest: ARCore Unity</h3>
                 <div class="project-description-wrapper">
                   <p class="project-description">An interactive quiz game built using ARCore SDK in Unity.</p>
@@ -328,83 +311,55 @@
                   <span class="read-more">Read More</span>
                 </div>
                 <div class="project-links">
-                  <a href="https://github.com/PixelSenseiAvi/ARCoreBunny" class="project-link" target="_blank">View
-                    Source</a>
+                  <a href="https://github.com/PixelSenseiAvi/ARCoreBunny" class="project-link" target="_blank" rel="noopener">View Source</a>
                 </div>
               </div>
-            </div>
-
-            <div class="project-card">
-              <div class="project-image-container">
-                <img src="images/bouncy.jpg" alt="Bouncy Game" class="project-image">
-                <div class="project-overlay">
-                  <a href="https://github.com/PixelSenseiAvi/Bouncy" class="view-project" target="_blank">View
-                    Source</a>
-                </div>
-              </div>
-              <div class="project-content">
-                <div class="project-tags">
-                <span class="project-tag">Unreal</span>
-                <span class="project-tag">Game</span>
-                </div>
-                
-                <h3 class="project-title">Bouncy: Windows Game</h3>
-                <div class="project-description-wrapper">
-                  <p class="project-description">Game Bounce.</p>
-                  <div class="fade-bottom"></div>
-                  <span class="read-more">Read More</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://github.com/PixelSenseiAvi/Bouncy" class="project-link" target="_blank">View
-                    Source</a>
-                </div>
-              </div>
-            </div>
-
+            </article>
 
           </div>
         </div>
-        <button class="scroll-button right" id="scrollRight">→</button>
+        <button class="scroll-button right" id="scrollRight" aria-label="Scroll projects right">→</button>
       </div>
     </section>
 
     <section class="skills-section">
       <div class="container">
-        <h1 class="text-center">My Skills</h1>
-        <div class="row mt-5">
-          <div class="col-md-3">
+        <h2 class="skills-title">My Skills</h2>
+        <div class="skills-grid">
+          <div class="skills-card">
             <h4>Code</h4>
             <ul>
-              <li>C/C++</li>
+              <li>C / C++</li>
               <li>C#</li>
               <li>Python</li>
             </ul>
           </div>
-          <div class="col-md-3">
+          <div class="skills-card">
             <h4>Frameworks</h4>
             <ul>
-              <li>Unity 2D & 3D</li>
+              <li>Unreal Engine 2D &amp; 3D</li>
+              <li>Unity 2D &amp; 3D</li>
               <li>OpenGL</li>
-              <li>Vulkan</li>
+              <li>Vulkan <span class="muted">(intermediate)</span></li>
             </ul>
           </div>
-          <div class="col-md-3">
+          <div class="skills-card">
             <h4>Libraries</h4>
             <ul>
               <li>Pandas</li>
-              <li>Numpy</li>
+              <li>NumPy</li>
               <li>OpenCV</li>
-              <li>Pytorch</li>
+              <li>PyTorch</li>
             </ul>
           </div>
-          <div class="col-md-3">
+          <div class="skills-card">
             <h4>Skills</h4>
             <ul>
-              <li>Realtime Rendering</li>
-              <li>Realtime Filmmaking</li>
-              <li>Physics, Maths</li>
+              <li>Gameplay Systems</li>
+              <li>Realtime Rendering, Filmmaking and Animation</li>
+              <li>Machine Learning</li>
+              <li>Physics &amp; Maths</li>
               <li>Image Processing</li>
-              <li>Cloud (GCP, Azure DevOps)</li>
             </ul>
           </div>
         </div>
@@ -413,159 +368,38 @@
 
     <footer class="footer">
       <div class="footer__copyright">
-        <div class="top">
-          <span>Developed by Avi Garg | 2019</span>
-        </div>
-        <div class="bottom">
-          <span>Inspired by Joe Rogers, Brittany Chiang</span>
-        </div>
+        <div class="top"><span>Developed by Avi Garg</span></div>
+        <div class="bottom"><span>Inspired by Joe Rogers &amp; Brittany Chiang</span></div>
       </div>
       <div class="footer__links">
-        <a href="mailto:gargav@tcd.ie" target="_blank" title="email">
+        <a href="mailto:gargav@tcd.ie" title="Email" aria-label="Email">
           <span class="text">email</span>
-          <i class="fas fa-envelope"></i>
-          <img src="images/itchio.svg" alt="twitter"> </a>
-        <a href="https://twitter.com/chik_avi" target="_blank" title="twitter">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+        </a>
+        <a href="https://twitter.com/chik_avi" target="_blank" rel="noopener" title="Twitter" aria-label="Twitter">
           <span class="text">twitter</span>
-          <i class="fab fa-twitter"></i>
-          <img src="images/itchio.svg" alt="twitter"> </a>
-        <a href="https://github.com/PixelSenseiAvi" target="_blank" title="github">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="https://github.com/PixelSenseiAvi" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
           <span class="text">github</span>
-          <i class="fab fa-github"></i>
-          <img src="images/itchio.svg" alt="twitter"> </a>
-        <a href="https://www.linkedin.com/in/gargavi" target="_blank" title="linkedin">
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/gargavi" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
           <span class="text">linkedin</span>
-          <i class="fab fa-linkedin"></i>
-          <img src="images/itchio.svg" alt="twitter"> </a>
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
       </div>
     </footer>
 
-    <button id="top-button" style="display: inline-block;">
-      <img src="" alt=""> </button>
+    <button id="top-button" type="button" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 19V5"/><path d="M5 12l7-7 7 7"/>
+      </svg>
+    </button>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"
-    charset="utf-8"></script>
-  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-  <script src="js/main.js" type="text/javascript" charset="utf-8"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Project carousel scrolling functionality
-      const wrapper = document.getElementById('projectsWrapper');
-      const scroll = document.getElementById('projectsScroll');
-      const buttonLeft = document.getElementById('scrollLeft');
-      const buttonRight = document.getElementById('scrollRight');
-      const scrollAmount = 600;
-      let autoScrollInterval;
-      let autoScrollTimer;
-      const autoScrollDelay = 25000; // 25 seconds
 
-      buttonLeft.addEventListener('click', () => {
-        wrapper.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-        resetAutoScroll();
-      });
-
-      buttonRight.addEventListener('click', () => {
-        wrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-        resetAutoScroll();
-      });
-
-      // Auto scroll function
-      function startAutoScroll() {
-        autoScrollInterval = setInterval(() => {
-          // Check if we're near the end of the scroll area
-          if (wrapper.scrollLeft + wrapper.clientWidth >= scroll.scrollWidth - 100) {
-            // If at the end, scroll back to the beginning
-            wrapper.scrollTo({ left: 0, behavior: 'smooth' });
-          } else {
-            // Otherwise, continue scrolling
-            wrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-          }
-        }, 5000); // Scroll every 5 seconds once auto-scroll is activated
-      }
-
-      // Reset auto scroll timer
-      function resetAutoScroll() {
-        // Clear existing timers and intervals
-        clearTimeout(autoScrollTimer);
-        clearInterval(autoScrollInterval);
-
-        // Set a new timer
-        autoScrollTimer = setTimeout(() => {
-          startAutoScroll();
-        }, autoScrollDelay);
-      }
-
-      // Initialize auto scroll
-      resetAutoScroll();
-
-      // Reset auto scroll on user interaction with the project section
-      wrapper.addEventListener('mouseover', resetAutoScroll);
-      wrapper.addEventListener('touchstart', resetAutoScroll);
-      wrapper.addEventListener('scroll', resetAutoScroll);
-
-      // Add hover effects for project cards
-      const projectCards = document.querySelectorAll('.project-card');
-      projectCards.forEach(card => {
-        const overlay = card.querySelector('.project-overlay');
-
-        card.addEventListener('mouseenter', () => {
-          if (overlay) {
-            overlay.style.opacity = '1';
-          }
-          resetAutoScroll();
-        });
-
-        card.addEventListener('mouseleave', () => {
-          if (overlay) {
-            overlay.style.opacity = '0';
-          }
-        });
-      });
-
-      // Add read more functionality
-      const readMoreButtons = document.querySelectorAll('.read-more');
-      readMoreButtons.forEach(button => {
-        button.addEventListener('click', function () {
-          const description = this.parentElement.querySelector('.project-description');
-          const fadeElement = this.parentElement.querySelector('.fade-bottom');
-
-          if (description.classList.contains('expanded')) {
-            // Collapse
-            description.classList.remove('expanded');
-            fadeElement.style.display = 'block';
-            this.textContent = 'Read More';
-          } else {
-            // Expand
-            description.classList.add('expanded');
-            fadeElement.style.display = 'none';
-            this.textContent = 'Read Less';
-          }
-
-          resetAutoScroll();
-        });
-      });
-
-      // Check which descriptions need read more buttons (wait for fonts to load properly)
-      setTimeout(() => {
-        readMoreButtons.forEach(button => {
-          const descriptionWrapper = button.parentElement;
-          const description = descriptionWrapper.querySelector('.project-description');
-          const fadeElement = descriptionWrapper.querySelector('.fade-bottom');
-
-          // Compare the scrollHeight (full content height) vs the clientHeight (visible height)
-          if (description.scrollHeight <= description.clientHeight + 5) { // Add small buffer for rounding
-            button.style.display = 'none';
-            fadeElement.style.display = 'none';
-          } else {
-            button.style.display = 'inline-block';
-            fadeElement.style.display = 'block';
-          }
-        });
-      }, 100); // Small delay to ensure fonts and layout are fully loaded
-    });
-  </script>
+  <script defer src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <script defer src="js/main.js"></script>
 </body>
 
 </html>
