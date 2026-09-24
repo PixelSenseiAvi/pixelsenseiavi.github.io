@@ -202,9 +202,9 @@
               </button>
             </figure>
             <div class="project-card__body">
-              <div class="project-card__tags"><span class="chip">Unreal Engine 5</span><span class="chip">Gameplay</span><span class="chip">Game Design</span></div>
+              <div class="project-card__tags"><span class="chip">Unreal Engine 5</span><span class="chip">Animation Blueprint</span><span class="chip">Inventory</span><span class="chip">Gameplay</span></div>
               <h3 class="project-card__title">Combat Game Design</h3>
-              <p class="project-card__desc">A walkthrough of a combat prototype built in Unreal Engine 5, set in a post-apocalyptic city. The video covers the third-person and first-person weapon views, the HUD with health, stamina and ammo, the inventory grid, and the enemy setup that the Combat AI project plugs into.</p>
+              <p class="project-card__desc">A combat prototype built in Unreal Engine 5, set in a post-apocalyptic city. I implemented weapon placement using skeletal mesh sockets and weapon-specific locomotion (idle, walk, run) in the Animation Blueprint, using State Machines, Blend Spaces and Linked Anim Layers, with Layered Blend per Bone and Aim Offsets for the upper body. I also implemented an inventory system with keyboard shortcuts for quick weapon and item switching, plus a HUD for health, stamina and ammo.</p>
               <button type="button" class="read-more" aria-expanded="false" hidden>Read more</button>
             </div>
           </article>
@@ -260,6 +260,33 @@
               <button type="button" class="read-more" aria-expanded="false" hidden>Read more</button>
               <div class="project-card__links">
                 <a class="project-link" href="https://modelworks.studio/interactive-portfolio" target="_blank" rel="noopener">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-tags="graphics">
+            <figure class="card-media">
+              <div class="card-media__bg" style="background-image:url('images/media/ibl.jpg')" aria-hidden="true"></div>
+              <video class="card-media__video" muted loop playsinline preload="none"
+                     poster="images/media/ibl.jpg"
+                     data-mp4="images/media/ibl.mp4" data-webm="images/media/ibl.webm"
+                     aria-label="Image based lighting demo preview"></video>
+              <span class="card-media__badge card-media__badge--sound"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Video with sound</span>
+              <button type="button" class="card-media__play" data-lightbox data-type="video"
+                      data-mp4="images/media/ibl.mp4" data-webm="images/media/ibl.webm"
+                      data-poster="images/media/ibl.jpg"
+                      data-title="Image Based Lighting">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Watch Reel
+              </button>
+            </figure>
+            <div class="project-card__body">
+              <div class="project-card__tags"><span class="chip">IBL</span><span class="chip">PBR</span><span class="chip">OpenGL</span><span class="chip">Tutorial</span></div>
+              <h3 class="project-card__title">Image Based Lighting</h3>
+              <p class="project-card__desc">Created a YouTube tutorial covering the mathematics and the code behind Image Based Lighting, for both the diffuse and the specular parts.</p>
+              <button type="button" class="read-more" aria-expanded="false" hidden>Read more</button>
+              <div class="project-card__links">
+                <a class="project-link" href="https://www.youtube.com/watch?v=UP-GWciOeVE" target="_blank" rel="noopener">Watch tutorial <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                <a class="project-link" href="https://github.com/PixelSenseiAvi/PBRIBL" target="_blank" rel="noopener">View source <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
               </div>
             </div>
           </article>
@@ -325,7 +352,30 @@
             </div>
           </article>
 
-          <article class="project-card" data-tags="unity ai">
+          <article class="project-card" data-tags="ai">
+            <figure class="card-media">
+              <div class="card-media__bg" style="background-image:url('images/media/handpose.jpg')" aria-hidden="true"></div>
+              <video class="card-media__video" muted loop playsinline preload="none"
+                     poster="images/media/handpose.jpg"
+                     data-mp4="images/media/handpose.mp4" data-webm="images/media/handpose.webm"
+                     aria-label="Hand keypoint estimation preview"></video>
+              <span class="card-media__badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Video</span>
+              <button type="button" class="card-media__play" data-lightbox data-type="video"
+                      data-mp4="images/media/handpose.mp4" data-webm="images/media/handpose.webm"
+                      data-poster="images/media/handpose.jpg"
+                      data-title="Hand Pose: Convolutional Pose Machines + Optical Flow">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Watch Reel
+              </button>
+            </figure>
+            <div class="project-card__body">
+              <div class="project-card__tags"><span class="chip">Computer Vision</span><span class="chip">CPM</span><span class="chip">Optical Flow</span></div>
+              <h3 class="project-card__title">Hand Pose Estimation</h3>
+              <p class="project-card__desc">Implemented Convolutional Pose Machines (CPM) for hand keypoint estimation, then calculated optical flow for each pipeline to track how the detected keypoints move between frames.</p>
+              <button type="button" class="read-more" aria-expanded="false" hidden>Read more</button>
+            </div>
+          </article>
+
+          <article class="project-card" data-tags="unity">
             <figure class="card-media">
               <div class="card-media__bg" style="background-image:url('images/media/avataar.jpg')" aria-hidden="true"></div>
               <video class="card-media__video" muted loop playsinline preload="none"
@@ -400,31 +450,6 @@
             </div>
           </article>
 
-          <article class="project-card" data-tags="graphics">
-            <figure class="card-media">
-              <div class="card-media__bg" style="background-image:url('images/media/ibl.jpg')" aria-hidden="true"></div>
-              <video class="card-media__video" muted loop playsinline preload="none"
-                     poster="images/media/ibl.jpg"
-                     data-mp4="images/media/ibl.mp4" data-webm="images/media/ibl.webm"
-                     aria-label="Image based lighting demo preview"></video>
-              <span class="card-media__badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Video</span>
-              <button type="button" class="card-media__play" data-lightbox data-type="video"
-                      data-mp4="images/media/ibl.mp4" data-webm="images/media/ibl.webm"
-                      data-poster="images/media/ibl.jpg"
-                      data-title="Image Based Lighting">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Watch Reel
-              </button>
-            </figure>
-            <div class="project-card__body">
-              <div class="project-card__tags"><span class="chip">PBR</span><span class="chip">IBL</span><span class="chip">OpenGL</span></div>
-              <h3 class="project-card__title">Image Based Lighting</h3>
-              <p class="project-card__desc">A physically based renderer lit by HDR environment maps, with a YouTube tutorial walking through LearnOpenGL's Image-Based Lighting: irradiance convolution, prefiltered specular maps and the BRDF lookup table.</p>
-              <button type="button" class="read-more" aria-expanded="false" hidden>Read more</button>
-              <div class="project-card__links">
-                <a class="project-link" href="https://github.com/PixelSenseiAvi/PBRIBL" target="_blank" rel="noopener">View source <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-              </div>
-            </div>
-          </article>
 
           <article class="project-card" data-tags="unity">
             <figure class="card-media">
