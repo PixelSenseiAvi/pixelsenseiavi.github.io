@@ -287,6 +287,28 @@ h1, h2, h3, h4 { color: var(--heading); margin: 0; line-height: 1.25; letter-spa
 .skills-card li:last-child { border-bottom: none; }
 .skills-card .muted { color: var(--muted); font-size: .85em; }
 
+/* ---------- games ---------- */
+.games { display: grid; gap: 28px; }
+.games__group-title {
+  display: flex; align-items: center; gap: 10px; font-size: .85rem; text-transform: uppercase; letter-spacing: .14em;
+  color: var(--accent); margin-bottom: 14px;
+}
+.games__group-icon {
+  width: 32px; height: 32px; border-radius: 9px; display: grid; place-items: center; background: var(--accent-tint);
+}
+.games__group-icon svg { width: 16px; height: 16px; }
+.games__list { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+.game {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 16px 18px;
+  box-shadow: var(--shadow-sm); border-left: 3px solid var(--accent);
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+}
+.game:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.game__top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 12px; }
+.game__title { font-weight: 700; color: var(--heading); font-size: 1rem; }
+.game__platform { font-size: .74rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.game__why { margin: 8px 0 0; font-size: .9rem; line-height: 1.6; color: var(--muted); font-weight: 300; }
+
 /* ---------- contact ---------- */
 .contact { text-align: center; }
 .contact__card {
