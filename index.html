@@ -1,403 +1,536 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#ac3232">
 
-  <title>Avi Garg — Creative Software Developer</title>
-  <meta name="description" content="Portfolio of Avi Garg — creative software developer working at the intersection of graphics, AI and immersive technologies.">
+  <title>Avi Garg | Gameplay &amp; Graphics Engineer</title>
+  <meta name="description" content="Portfolio of Avi Garg, a Senior Gameplay and Graphics Engineer working across Unreal, Unity, real-time rendering and computer vision.">
   <meta name="author" content="Avi Garg">
+  <link rel="canonical" href="https://pixelsenseiavi.github.io/">
 
-  <meta property="og:title" content="Avi Garg — Creative Software Developer">
-  <meta property="og:description" content="Portfolio of Avi Garg — graphics, AI, and immersive technologies.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="images/avi.jpg">
+  <meta property="og:url" content="https://pixelsenseiavi.github.io/">
+  <meta property="og:title" content="Avi Garg | Gameplay &amp; Graphics Engineer">
+  <meta property="og:description" content="Unreal and Unity gameplay, GPU rendering, and computer-vision pipelines that turn human motion into input.">
+  <meta property="og:image" content="https://pixelsenseiavi.github.io/images/avi.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@chik_avi">
 
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="icon" type="image/png" href="images/Icon_Logo.png">
+  <link rel="apple-touch-icon" href="images/Icon_Logo.png">
+
+  <link rel="preload" as="font" type="font/ttf" href="fonts/Raleway/Raleway-Regular.ttf" crossorigin>
+  <link rel="preload" as="font" type="font/ttf" href="fonts/Raleway/Raleway-Bold.ttf" crossorigin>
   <link rel="preload" as="image" href="images/avi.jpg">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/projects.css">
-  <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+
+  <!-- Apply the saved theme before first paint to avoid a flash -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Avi Garg",
+    "url": "https://pixelsenseiavi.github.io/",
+    "image": "https://pixelsenseiavi.github.io/images/avi.jpg",
+    "jobTitle": "Senior Gameplay & Graphics Engineer",
+    "email": "mailto:gargav@tcd.ie",
+    "alumniOf": "Trinity College Dublin",
+    "sameAs": [
+      "https://github.com/PixelSenseiAvi",
+      "https://www.linkedin.com/in/gargavi",
+      "https://twitter.com/chik_avi"
+    ]
+  }
+  </script>
 </head>
 
 <body>
-  <div id="site">
-    <div class="accent-bar" aria-hidden="true"></div>
+  <div class="accent-bar" aria-hidden="true"></div>
 
-    <header class="intro">
-      <h1 class="intro__hello">Howdy<span class="wave" aria-hidden="true">👋</span></h1>
-      <div class="intro__wrap">
-        <img class="intro__icon" src="images/avi.jpg" alt="Portrait of Avi Garg" width="200" height="200" decoding="async" />
-        <h2 class="intro__tagline">I'm a Senior Gameplay & Graphics Engineer with five years of shipping production-ready 
-          systems across the full engine stack — AI and behaviour systems, combat mechanics, multiplayer architecture, and real-time rendering. 
-          My work lives where computer graphics meets AI: from Unreal/Unity gameplay and GPU-optimised rendering to computer-vision pipelines 
-          that turn human motion into input. I care equally about player feel and technical performance, and I'm at my best taking ambitious,
-          immersive ideas from prototype to launch.
-        </h2>
+  <!-- ============================================================ NAV -->
+  <nav class="nav" aria-label="Primary">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="#top" aria-label="Avi Garg, back to top">
+        <span class="nav__brand-mark" aria-hidden="true">AG</span>
+        <span>Avi Garg</span>
+      </a>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="icon-btn nav__burger" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
       </div>
-      <h3 class="intro__contact">Got an interesting project? Send me a message at
-        <a href="mailto:gargav@tcd.ie" class="highlight-link">gargav@tcd.ie</a>
-      </h3>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <!-- ========================================================= HERO -->
+    <header class="hero container">
+      <div class="hero__grid">
+        <div>
+          <p class="hero__hello">Howdy <span class="wave" aria-hidden="true">👋</span></p>
+          <h1 class="hero__name">I'm <span class="accent">Avi Garg</span>.</h1>
+          <p class="hero__role">Senior Gameplay &amp; Graphics Engineer</p>
+          <p class="hero__tagline">
+            Five years of shipping production-ready systems across the full engine stack: AI and behaviour systems,
+            combat mechanics, multiplayer architecture and real-time rendering. My work lives where computer graphics
+            meets AI, from Unreal and Unity gameplay and GPU-optimised rendering to computer-vision pipelines that turn
+            human motion into input. I care equally about player feel and technical performance, and I'm at my best
+            taking ambitious, immersive ideas from prototype to launch.
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#projects">
+              See my work
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="mailto:gargav@tcd.ie">Get in touch</a>
+          </div>
+          <p class="hero__contact">Got an interesting project? Send me a message at
+            <a href="mailto:gargav@tcd.ie" class="highlight-link">gargav@tcd.ie</a>
+          </p>
+        </div>
+        <img class="hero__portrait" src="images/avi.jpg" alt="Portrait of Avi Garg" width="240" height="240" decoding="async" fetchpriority="high">
+      </div>
     </header>
 
-    <section class=" section background" data-sr>
-      <div class="section__title">
-        Background
-        <br>
-        <img class="section__background__portrait" src="images/Icon_Potion.gif" alt="" width="65" height="100" loading="lazy" decoding="async" />
-      </div>
-      <div class="section__content">
-        <p>I'm a software developer specialising in Gameplay Systems, Computer Graphics and Computer Vision. I'm currently based in
-          <strong>India</strong> and hold a post-graduate degree in
-          <a class="underline-link" href="https://www.tcd.ie/courses/postgraduate/az/course.php?id=DPTCS-AVRE-1F09"
-            target="_blank" rel="noopener">Computer Science — Graphics and Vision technologies</a> from
-          <a class="underline-link" href="https://www.tcd.ie/" target="_blank" rel="noopener">Trinity College Dublin</a>.
-          I have gained diverse experience using C/C++ and Unity across various immersive technologies with organizations like
-          <a class="underline-link" href="https://vigastudios.com/" target="_blank" rel="noopener">Viga Studios</a>,
-          <a class="underline-link" href="https://modelworks.ie/" target="_blank" rel="noopener">Modelworks Studios</a>,
-          <a class="underline-link" href="https://fev.com/" target="_blank" rel="noopener">FEV</a>, and
-          <a class="underline-link" href="https://www.a2ai.com.au/" target="_blank" rel="noopener">A2.AI</a>.
-        </p>
-        <p>I love engaging with new technologies, people and challenges — it's the fuel for my continuous learning and
-          growth. My expertise spans Physics, Rendering Algorithms, Image Processing, and neural network
-          development.</p>
-        <p><strong>Always eager for innovative projects and exciting opportunities, so don't hesitate to get in touch.</strong></p>
-      </div>
-    </section>
-
-    <section class="projects-section">
-      <h2 class="section__title section__title--center">Featured Projects</h2>
-      <div class="projects-container">
-        <button class="scroll-button left" id="scrollLeft" aria-label="Scroll projects left">←</button>
-        <div class="projects-wrapper" id="projectsWrapper">
-          <div class="projects-scroll" id="projectsScroll">
-
-            <article class="project-card">
-              <div class="project-image-container">
-                <img src="images/Combat.gif" alt="Smart Enemy AI gameplay" class="project-image" loading="lazy" decoding="async">
-                <div class="project-overlay">
-                  <a href="https://github.com/PixelSenseiAvi/SmartEnemyAI" class="view-project" target="_blank" rel="noopener">View Project</a>
-                </div>
-              </div>
-              <div class="project-content">
-                <div class="project-tags">
-                  <span class="project-tag">Unreal Engine 5</span>
-                  <span class="project-tag">Enemy AI</span>
-                </div>
-                <h3 class="project-title">Combat Third Person AI</h3>
-                <div class="project-description-wrapper">
-                  <p class="project-description">Created a sophisticated combat AI for a third-person game using Unreal Engine 5.</p>
-                  <div class="fade-bottom"></div>
-                  <span class="read-more">Read More</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://github.com/PixelSenseiAvi/SmartEnemyAI" class="project-link" target="_blank" rel="noopener">View Source</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-image-container">
-                <img src="images/modelworks.gif" alt="Modelworks interactive portfolio" class="project-image" loading="lazy" decoding="async">
-                <div class="project-overlay">
-                  <a href="https://modelworks.studio/interactive-portfolio" class="view-project" target="_blank" rel="noopener">View Project</a>
-                </div>
-              </div>
-              <div class="project-content">
-                <div class="project-tags">
-                  <span class="project-tag">Unreal</span>
-                  <span class="project-tag">3D</span>
-                </div>
-                <h3 class="project-title">Modelworks, Dublin 🇮🇪</h3>
-                <div class="project-description-wrapper">
-                  <p class="project-description">One of the awesome things we do at Modelworks.</p>
-                  <div class="fade-bottom"></div>
-                  <span class="read-more">Read More</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://modelworks.studio/interactive-portfolio" class="project-link" target="_blank" rel="noopener">Learn More</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-image-container">
-                <img src="images/blendshape.gif" alt="Facial animation blendshapes demo" class="project-image" loading="lazy" decoding="async">
-                <div class="project-overlay">
-                  <a href="https://github.com/PixelSenseiAvi/FacialAnimation" class="view-project" target="_blank" rel="noopener">View Source</a>
-                </div>
-              </div>
-              <div class="project-content">
-                <div class="project-tags">
-                  <span class="project-tag">C++</span>
-                </div>
-                <h3 class="project-title">Blendshape Facial Animation</h3>
-                <div class="project-description-wrapper">
-                  <p class="project-description">Implemented facial animation in C++ using Blendshapes.</p>
-                  <div class="fade-bottom"></div>
-                  <span class="read-more">Read More</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://github.com/PixelSenseiAvi/FacialAnimation" class="project-link" target="_blank" rel="noopener">View Source</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-image-container">
-                <img src="images/YesChef!-Gameplay.gif" alt="YesChef! gameplay" class="project-image" loading="lazy" decoding="async">
-                <div class="project-overlay">
-                  <a href="https://github.com/PixelSenseiAvi/YesChef-" class="view-project" target="_blank" rel="noopener">View Source</a>
-                </div>
-              </div>
-              <div class="project-content">
-                <div class="project-tags">
-                  <span class="project-tag">Unity</span>
-                  <span class="project-tag">2.5D</span>
-                </div>
-                <h3 class="project-title">YesChef!</h3>
-                <div class="project-description-wrapper">
-                  <p class="project-description">A 2.5D cooking arcade game built in Unity.</p>
-                  <div class="fade-bottom"></div>
-                  <span class="read-more">Read More</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://github.com/PixelSenseiAvi/YesChef-" class="project-link" target="_blank" rel="noopener">View Source</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-image-container">
-                <img src="images/reflection.png" alt="Transmittance effects render" class="project-image" loading="lazy" decoding="async">
-                <div class="project-overlay">
-                  <a href="https://github.com/PixelSenseiAvi/TransmittanceEffects" class="view-project" target="_blank" rel="noopener">View Source</a>
-                </div>
-              </div>
-              <div class="project-content">
-                <div class="project-tags">
-                  <span class="project-tag">OpenGL</span>
-                  <span class="project-tag">GLSL</span>
-                </div>
-                <h3 class="project-title">Transmittance Effects</h3>
-                <div class="project-description-wrapper">
-                  <p class="project-description">Demo for Reflection, Refraction, and Fresnel Effects.</p>
-                  <div class="fade-bottom"></div>
-                  <span class="read-more">Read More</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://github.com/PixelSenseiAvi/TransmittanceEffects" class="project-link" target="_blank" rel="noopener">View Source</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-image-container">
-                <img src="images/Avataar.gif" alt="3D Avataar Salsa LipSync demo" class="project-image" loading="lazy" decoding="async">
-                <div class="project-overlay">
-                  <a href="#" class="view-project">View Details</a>
-                </div>
-              </div>
-              <div class="project-content">
-                <div class="project-tags">
-                  <span class="project-tag">Unity</span>
-                  <span class="project-tag">AI</span>
-                </div>
-                <h3 class="project-title">3D Avataar — Salsa LipSync</h3>
-                <div class="project-description-wrapper">
-                  <p class="project-description">Avataar + Salsa LipSync + OpenAI TTS.</p>
-                  <div class="fade-bottom"></div>
-                  <span class="read-more">Read More</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-image-container">
-                <img src="images/NewAppOverview.gif" alt="A2.AI rep counting demo" class="project-image" loading="lazy" decoding="async">
-                <div class="project-overlay">
-                  <a href="https://www.a2ai.com.au/" class="view-project" target="_blank" rel="noopener">View Project</a>
-                </div>
-              </div>
-              <div class="project-content">
-                <div class="project-tags">
-                  <span class="project-tag">Unity</span>
-                  <span class="project-tag">AI</span>
-                </div>
-                <h3 class="project-title">A2.AI, Australia 🇦🇺</h3>
-                <div class="project-description-wrapper">
-                  <p class="project-description">Rep Counting & Pose Correction pipeline.</p>
-                  <div class="fade-bottom"></div>
-                  <span class="read-more">Read More</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://www.a2ai.com.au/" class="project-link" target="_blank" rel="noopener">Learn More</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-image-container">
-                <img src="images/video2pose.gif" alt="Video2Pose pipeline preview" class="project-image" loading="lazy" decoding="async">
-                <div class="project-overlay">
-                  <a href="https://vigastudios.com/" class="view-project" target="_blank" rel="noopener">Learn More</a>
-                </div>
-              </div>
-              <div class="project-content">
-                <div class="project-tags">
-                  <span class="project-tag">Computer Vision</span>
-                  <span class="project-tag">GAN</span>
-                </div>
-                <h3 class="project-title">Video2Pose: ViGA Interactive</h3>
-                <div class="project-description-wrapper">
-                  <p class="project-description">The pipeline extracts 3D poses from 2D frame sequences using Microsoft's 3D convolutional GAN architecture (2020).</p>
-                  <div class="fade-bottom"></div>
-                  <span class="read-more">Read More</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://vigastudios.com/" class="project-link" target="_blank" rel="noopener">Learn More</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-image-container">
-                <img src="images/IBLDemo.gif" alt="Image based lighting demo" class="project-image" loading="lazy" decoding="async">
-                <div class="project-overlay">
-                  <a href="https://github.com/PixelSenseiAvi/PBRIBL" class="view-project" target="_blank" rel="noopener">View Source</a>
-                </div>
-              </div>
-              <div class="project-content">
-                <div class="project-tags">
-                  <span class="project-tag">PBR</span>
-                  <span class="project-tag">IBL</span>
-                </div>
-                <h3 class="project-title">Image Based Lighting</h3>
-                <div class="project-description-wrapper">
-                  <p class="project-description">Created a YouTube tutorial based on LearnOpenGL's Image-Based Lighting environment.</p>
-                  <div class="fade-bottom"></div>
-                  <span class="read-more">Read More</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://github.com/PixelSenseiAvi/PBRIBL" class="project-link" target="_blank" rel="noopener">View Source</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-image-container">
-                <img src="images/bunny.gif" alt="BunnyQuest ARCore demo" class="project-image" loading="lazy" decoding="async">
-                <div class="project-overlay">
-                  <a href="https://github.com/PixelSenseiAvi/ARCoreBunny" class="view-project" target="_blank" rel="noopener">View Source</a>
-                </div>
-              </div>
-              <div class="project-content">
-                <div class="project-tags">
-                  <span class="project-tag">Unity</span>
-                  <span class="project-tag">ARCore</span>
-                </div>
-                <h3 class="project-title">BunnyQuest: ARCore Unity</h3>
-                <div class="project-description-wrapper">
-                  <p class="project-description">An interactive quiz game built using ARCore SDK in Unity.</p>
-                  <div class="fade-bottom"></div>
-                  <span class="read-more">Read More</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://github.com/PixelSenseiAvi/ARCoreBunny" class="project-link" target="_blank" rel="noopener">View Source</a>
-                </div>
-              </div>
-            </article>
-
-          </div>
-        </div>
-        <button class="scroll-button right" id="scrollRight" aria-label="Scroll projects right">→</button>
-      </div>
-    </section>
-
-    <section class="skills-section">
+    <!-- ======================================================== ABOUT -->
+    <section class="section" id="about" data-reveal>
       <div class="container">
-        <h2 class="skills-title">My Skills</h2>
+        <div class="section__head">
+          <span class="section__eyebrow">Background</span>
+          <h2 class="section__title">Gameplay systems, Graphics and vision.</h2>
+        </div>
+        <div class="about__grid">
+          <div class="about__text">
+            <p>I'm a software developer specialising in Gameplay Systems, Computer Graphics and Computer Vision. I'm currently
+              based in <strong>India</strong> and hold a post-graduate degree in
+              <a class="underline-link" href="https://www.tcd.ie/courses/postgraduate/az/course.php?id=DPTCS-AVRE-1F09" target="_blank" rel="noopener">Computer Science, Graphics and Vision Technologies</a>
+              from <a class="underline-link" href="https://www.tcd.ie/" target="_blank" rel="noopener">Trinity College Dublin</a>.
+            </p>
+            <p>I've gained diverse experience using C/C++, C#, Unreal and Unity across games and immersive technologies with organisations like
+              Morphionix, Fiverr,
+              <a class="underline-link" href="https://vigastudios.com/" target="_blank" rel="noopener">Viga Studios</a>,
+              <a class="underline-link" href="https://modelworks.ie/" target="_blank" rel="noopener">Modelworks Studios</a> and
+              <a class="underline-link" href="https://www.a2ai.com.au/" target="_blank" rel="noopener">A2.AI</a>.
+            </p>
+            <p>I love engaging with new technologies, people and challenges. It's the fuel for my continuous learning and
+              growth. My expertise spans physics, rendering algorithms, image processing and neural network development.</p>
+            <p><strong>Always eager for innovative projects and exciting opportunities, so don't hesitate to get in touch.</strong></p>
+          </div>
+
+          <ul class="facts">
+            <li class="fact">
+              <span class="fact__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+              <div><div class="fact__label">Focus</div><div class="fact__value">Gameplay, rendering, computer vision</div></div>
+            </li>
+            <li class="fact">
+              <span class="fact__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></span>
+              <div><div class="fact__label">Education</div><div class="fact__value">Postgraduate, Graphics &amp; Vision, Trinity College Dublin</div></div>
+            </li>
+            <li class="fact">
+              <span class="fact__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <div><div class="fact__label">Based in</div><div class="fact__value">India</div></div>
+            </li>
+            <li class="fact">
+              <span class="fact__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></span>
+              <div><div class="fact__label">Daily tools</div><div class="fact__value">C++, C#, Unreal Engine 5, Unity, OpenGL</div></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== PROJECTS -->
+    <section class="section section--alt" id="projects" data-reveal>
+      <div class="container">
+        <div class="section__head section__head--center">
+          <span class="section__eyebrow">Featured projects</span>
+          <h2 class="section__title">Things I've built</h2>
+          <p class="section__lede">Hover a card to preview it. Hit play to watch it full-size, with sound where there is any.</p>
+        </div>
+
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button type="button" class="is-active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="unreal" aria-pressed="false">Unreal</button>
+          <button type="button" data-filter="unity" aria-pressed="false">Unity</button>
+          <button type="button" data-filter="graphics" aria-pressed="false">Graphics</button>
+          <button type="button" data-filter="ai" aria-pressed="false">AI &amp; Vision</button>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Combat game design walkthrough: short muted preview inline, full video with audio in the lightbox -->
+          <article class="project-card" data-tags="unreal">
+            <figure class="card-media">
+              <div class="card-media__bg" style="background-image:url('images/media/combat-gamedesign.jpg')" aria-hidden="true"></div>
+              <video class="card-media__video" muted loop playsinline preload="none"
+                     poster="images/media/combat-gamedesign.jpg"
+                     data-mp4="images/media/combat-gamedesign-preview.mp4" data-webm="images/media/combat-gamedesign-preview.webm"
+                     aria-label="Combat game design walkthrough preview"></video>
+              <span class="card-media__badge card-media__badge--sound"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Video with sound</span>
+              <button type="button" class="card-media__play" data-lightbox data-type="video"
+                      data-mp4="images/media/combat-gamedesign.mp4" data-webm="images/media/combat-gamedesign.webm"
+                      data-poster="images/media/combat-gamedesign.jpg"
+                      data-title="Combat Game Design: Unreal Engine 5 walkthrough"
+                      data-caption="Full walkthrough with commentary.">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Watch Reel
+              </button>
+            </figure>
+            <div class="project-card__body">
+              <div class="project-card__tags"><span class="chip">Unreal Engine 5</span><span class="chip">Gameplay</span><span class="chip">Game Design</span></div>
+              <h3 class="project-card__title">Combat Game Design</h3>
+              <p class="project-card__desc">A walkthrough of a combat prototype built in Unreal Engine 5, set in a post-apocalyptic city. The video covers the third-person and first-person weapon views, the HUD with health, stamina and ammo, the inventory grid, and the enemy setup that the Combat AI project plugs into.</p>
+              <button type="button" class="read-more" aria-expanded="false" hidden>Read more</button>
+            </div>
+          </article>
+
+          <!-- Combat AI: inline loop is the converted gif, lightbox is the full design walkthrough with audio -->
+          <article class="project-card" data-tags="unreal">
+            <figure class="card-media">
+              <div class="card-media__bg" style="background-image:url('images/media/combat.jpg')" aria-hidden="true"></div>
+              <video class="card-media__video" muted loop playsinline preload="none"
+                     poster="images/media/combat.jpg"
+                     data-mp4="images/media/combat.mp4" data-webm="images/media/combat.webm"
+                     aria-label="Combat AI gameplay preview"></video>
+              <span class="card-media__badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Video</span>
+              <button type="button" class="card-media__play" data-lightbox data-type="video"
+                      data-mp4="images/media/combat.mp4" data-webm="images/media/combat.webm"
+                      data-poster="images/media/combat.jpg"
+                      data-title="Combat Third Person AI">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Watch Reel
+              </button>
+            </figure>
+            <div class="project-card__body">
+              <div class="project-card__tags"><span class="chip">Unreal Engine 5</span><span class="chip">Behaviour Trees</span><span class="chip">C++</span></div>
+              <h3 class="project-card__title">Combat Third Person AI</h3>
+              <p class="project-card__desc">A combat AI for a third-person action game built in Unreal Engine 5. Enemies run on Behaviour Trees with patrol and state management, and use AIPerception to notice, track and engage the player. Environmental Query System support and additional enemy archetypes are in progress.</p>
+              <button type="button" class="read-more" aria-expanded="false" hidden>Read more</button>
+              <div class="project-card__links">
+                <a class="project-link" href="https://github.com/PixelSenseiAvi/SmartEnemyAI" target="_blank" rel="noopener">View source <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+
+
+          <article class="project-card" data-tags="unreal">
+            <figure class="card-media">
+              <div class="card-media__bg" style="background-image:url('images/media/modelworks.jpg')" aria-hidden="true"></div>
+              <video class="card-media__video" muted loop playsinline preload="none"
+                     poster="images/media/modelworks.jpg"
+                     data-mp4="images/media/modelworks.mp4" data-webm="images/media/modelworks.webm"
+                     aria-label="Modelworks interactive portfolio preview"></video>
+              <span class="card-media__badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Video</span>
+              <button type="button" class="card-media__play" data-lightbox data-type="video"
+                      data-mp4="images/media/modelworks.mp4" data-webm="images/media/modelworks.webm"
+                      data-poster="images/media/modelworks.jpg"
+                      data-title="Modelworks Studios: interactive portfolio">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Watch Reel
+              </button>
+            </figure>
+            <div class="project-card__body">
+              <div class="project-card__tags"><span class="chip">Unreal</span><span class="chip">3D</span><span class="chip">Interactive</span></div>
+              <h3 class="project-card__title">Modelworks, Dublin 🇮🇪</h3>
+              <p class="project-card__desc">One of the awesome things we do at Modelworks: real-time interactive 3D portfolio experiences built in Unreal Engine.</p>
+              <button type="button" class="read-more" aria-expanded="false" hidden>Read more</button>
+              <div class="project-card__links">
+                <a class="project-link" href="https://modelworks.studio/interactive-portfolio" target="_blank" rel="noopener">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-tags="graphics">
+            <figure class="card-media">
+              <div class="card-media__bg" style="background-image:url('images/blendshape.gif')" aria-hidden="true"></div>
+              <img class="card-media__img" src="images/blendshape.gif" alt="Facial animation blendshapes demo" loading="lazy" decoding="async">
+              <button type="button" class="card-media__play" data-lightbox data-type="image"
+                      data-src="images/blendshape.gif" data-alt="Facial animation blendshapes demo"
+                      data-title="Blendshape Facial Animation">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>View
+              </button>
+            </figure>
+            <div class="project-card__body">
+              <div class="project-card__tags"><span class="chip">C++</span><span class="chip">OpenGL</span></div>
+              <h3 class="project-card__title">Blendshape Facial Animation</h3>
+              <p class="project-card__desc">Facial animation implemented from scratch in C++ and OpenGL using blendshapes: a neutral mesh is morphed by weighted target shapes to produce expressions in real time.</p>
+              <button type="button" class="read-more" aria-expanded="false" hidden>Read more</button>
+              <div class="project-card__links">
+                <a class="project-link" href="https://github.com/PixelSenseiAvi/FacialAnimation" target="_blank" rel="noopener">View source <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-tags="unity">
+            <figure class="card-media">
+              <div class="card-media__bg" style="background-image:url('images/YesChef!-Gameplay.gif')" aria-hidden="true"></div>
+              <img class="card-media__img" src="images/YesChef!-Gameplay.gif" alt="YesChef! gameplay" loading="lazy" decoding="async">
+              <button type="button" class="card-media__play" data-lightbox data-type="image"
+                      data-src="images/YesChef!-Gameplay.gif" data-alt="YesChef! gameplay" data-title="YesChef!">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>View
+              </button>
+            </figure>
+            <div class="project-card__body">
+              <div class="project-card__tags"><span class="chip">Unity</span><span class="chip">2.5D</span><span class="chip">C#</span></div>
+              <h3 class="project-card__title">YesChef!</h3>
+              <p class="project-card__desc">A 2.5D cooking arcade game built in Unity.</p>
+              <button type="button" class="read-more" aria-expanded="false" hidden>Read more</button>
+              <div class="project-card__links">
+                <a class="project-link" href="https://github.com/PixelSenseiAvi/YesChef-" target="_blank" rel="noopener">View source <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-tags="graphics">
+            <figure class="card-media">
+              <div class="card-media__bg" style="background-image:url('images/reflection.png')" aria-hidden="true"></div>
+              <img class="card-media__img" src="images/reflection.png" alt="Reflection and refraction render" loading="lazy" decoding="async">
+              <button type="button" class="card-media__play" data-lightbox data-type="image"
+                      data-src="images/reflection.png" data-alt="Reflection and refraction render" data-title="Transmittance Effects">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>View
+              </button>
+            </figure>
+            <div class="project-card__body">
+              <div class="project-card__tags"><span class="chip">OpenGL</span><span class="chip">GLSL</span><span class="chip">C++</span></div>
+              <h3 class="project-card__title">Transmittance Effects</h3>
+              <p class="project-card__desc">A real-time OpenGL demo of light passing through and bouncing off surfaces: reflection, refraction, the Fresnel effect (reflectivity changing with viewing angle) and chromatic aberration, all written in GLSL. Uses GLFW for windowing and Assimp for model loading.</p>
+              <button type="button" class="read-more" aria-expanded="false" hidden>Read more</button>
+              <div class="project-card__links">
+                <a class="project-link" href="https://github.com/PixelSenseiAvi/TransmittanceEffects" target="_blank" rel="noopener">View source <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-tags="unity ai">
+            <figure class="card-media">
+              <div class="card-media__bg" style="background-image:url('images/media/avataar.jpg')" aria-hidden="true"></div>
+              <video class="card-media__video" muted loop playsinline preload="none"
+                     poster="images/media/avataar.jpg"
+                     data-mp4="images/media/avataar.mp4" data-webm="images/media/avataar.webm"
+                     aria-label="3D avatar lip sync preview"></video>
+              <span class="card-media__badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Video</span>
+              <button type="button" class="card-media__play" data-lightbox data-type="video"
+                      data-mp4="images/media/avataar.mp4" data-webm="images/media/avataar.webm"
+                      data-poster="images/media/avataar.jpg"
+                      data-title="3D Avataar: Salsa LipSync + OpenAI TTS">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Watch Reel
+              </button>
+            </figure>
+            <div class="project-card__body">
+              <div class="project-card__tags"><span class="chip">Unity</span><span class="chip">AI</span><span class="chip">TTS</span></div>
+              <h3 class="project-card__title">3D Avataar: Salsa LipSync</h3>
+              <p class="project-card__desc">A talking 3D avatar in Unity. Text goes to OpenAI's text-to-speech, and Salsa LipSync drives the mouth shapes from the generated audio so the character speaks any line convincingly.</p>
+              <button type="button" class="read-more" aria-expanded="false" hidden>Read more</button>
+            </div>
+          </article>
+
+          <article class="project-card" data-tags="unity ai">
+            <figure class="card-media">
+              <div class="card-media__bg" style="background-image:url('images/media/a2ai.jpg')" aria-hidden="true"></div>
+              <video class="card-media__video" muted loop playsinline preload="none"
+                     poster="images/media/a2ai.jpg"
+                     data-mp4="images/media/a2ai.mp4" data-webm="images/media/a2ai.webm"
+                     aria-label="A2.AI rep counting app preview"></video>
+              <span class="card-media__badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Video</span>
+              <button type="button" class="card-media__play" data-lightbox data-type="video"
+                      data-mp4="images/media/a2ai.mp4" data-webm="images/media/a2ai.webm"
+                      data-poster="images/media/a2ai.jpg"
+                      data-title="A2.AI: rep counting and pose correction">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Watch Reel
+              </button>
+            </figure>
+            <div class="project-card__body">
+              <div class="project-card__tags"><span class="chip">Unity</span><span class="chip">Computer Vision</span><span class="chip">Mobile</span></div>
+              <h3 class="project-card__title">A2.AI, Australia 🇦🇺</h3>
+              <p class="project-card__desc">A rep counting and pose correction pipeline: the phone camera tracks the user's body, counts repetitions and checks form in real time.</p>
+              <button type="button" class="read-more" aria-expanded="false" hidden>Read more</button>
+              <div class="project-card__links">
+                <a class="project-link" href="https://www.a2ai.com.au/" target="_blank" rel="noopener">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-tags="ai">
+            <figure class="card-media">
+              <div class="card-media__bg" style="background-image:url('images/media/video2pose.jpg')" aria-hidden="true"></div>
+              <video class="card-media__video" muted loop playsinline preload="none"
+                     poster="images/media/video2pose.jpg"
+                     data-mp4="images/media/video2pose.mp4" data-webm="images/media/video2pose.webm"
+                     aria-label="Video2Pose pipeline preview"></video>
+              <span class="card-media__badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Video</span>
+              <button type="button" class="card-media__play" data-lightbox data-type="video"
+                      data-mp4="images/media/video2pose.mp4" data-webm="images/media/video2pose.webm"
+                      data-poster="images/media/video2pose.jpg"
+                      data-title="Video2Pose: ViGA Interactive">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Watch Reel
+              </button>
+            </figure>
+            <div class="project-card__body">
+              <div class="project-card__tags"><span class="chip">Computer Vision</span><span class="chip">GAN</span><span class="chip">PyTorch</span></div>
+              <h3 class="project-card__title">Video2Pose: ViGA Interactive</h3>
+              <p class="project-card__desc">The pipeline extracts 3D poses from 2D frame sequences using Microsoft's 3D convolutional GAN architecture (2020), turning ordinary video into motion data that can drive characters.</p>
+              <button type="button" class="read-more" aria-expanded="false" hidden>Read more</button>
+              <div class="project-card__links">
+                <a class="project-link" href="https://vigastudios.com/" target="_blank" rel="noopener">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-tags="graphics">
+            <figure class="card-media">
+              <div class="card-media__bg" style="background-image:url('images/media/ibl.jpg')" aria-hidden="true"></div>
+              <video class="card-media__video" muted loop playsinline preload="none"
+                     poster="images/media/ibl.jpg"
+                     data-mp4="images/media/ibl.mp4" data-webm="images/media/ibl.webm"
+                     aria-label="Image based lighting demo preview"></video>
+              <span class="card-media__badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Video</span>
+              <button type="button" class="card-media__play" data-lightbox data-type="video"
+                      data-mp4="images/media/ibl.mp4" data-webm="images/media/ibl.webm"
+                      data-poster="images/media/ibl.jpg"
+                      data-title="Image Based Lighting">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Watch Reel
+              </button>
+            </figure>
+            <div class="project-card__body">
+              <div class="project-card__tags"><span class="chip">PBR</span><span class="chip">IBL</span><span class="chip">OpenGL</span></div>
+              <h3 class="project-card__title">Image Based Lighting</h3>
+              <p class="project-card__desc">A physically based renderer lit by HDR environment maps, with a YouTube tutorial walking through LearnOpenGL's Image-Based Lighting: irradiance convolution, prefiltered specular maps and the BRDF lookup table.</p>
+              <button type="button" class="read-more" aria-expanded="false" hidden>Read more</button>
+              <div class="project-card__links">
+                <a class="project-link" href="https://github.com/PixelSenseiAvi/PBRIBL" target="_blank" rel="noopener">View source <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-tags="unity">
+            <figure class="card-media">
+              <div class="card-media__bg" style="background-image:url('images/bunny.gif')" aria-hidden="true"></div>
+              <img class="card-media__img" src="images/bunny.gif" alt="BunnyQuest ARCore demo" loading="lazy" decoding="async">
+              <button type="button" class="card-media__play" data-lightbox data-type="image"
+                      data-src="images/bunny.gif" data-alt="BunnyQuest ARCore demo" data-title="BunnyQuest: ARCore Unity">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>View
+              </button>
+            </figure>
+            <div class="project-card__body">
+              <div class="project-card__tags"><span class="chip">Unity</span><span class="chip">ARCore</span><span class="chip">Android</span></div>
+              <h3 class="project-card__title">BunnyQuest: ARCore Unity</h3>
+              <p class="project-card__desc">An interactive quiz game built with the ARCore SDK in Unity, with the bunny anchored in the real world through the phone camera.</p>
+              <button type="button" class="read-more" aria-expanded="false" hidden>Read more</button>
+              <div class="project-card__links">
+                <a class="project-link" href="https://github.com/PixelSenseiAvi/ARCoreBunny" target="_blank" rel="noopener">View source <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+        <p class="projects__empty" hidden>Nothing tagged with that yet.</p>
+      </div>
+    </section>
+
+
+    <!-- ======================================================= SKILLS -->
+    <section class="section section--alt" id="skills" data-reveal>
+      <div class="container">
+        <div class="section__head section__head--center">
+          <span class="section__eyebrow">Skills</span>
+          <h2 class="section__title">What I work with</h2>
+        </div>
         <div class="skills-grid">
           <div class="skills-card">
-            <h4>Code</h4>
-            <ul>
-              <li>C / C++</li>
-              <li>C#</li>
-              <li>Python</li>
-            </ul>
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>Code</h3>
+            <ul><li>C / C++</li><li>C#</li><li>Python</li><li>GLSL / HLSL</li></ul>
           </div>
           <div class="skills-card">
-            <h4>Frameworks</h4>
-            <ul>
-              <li>Unreal Engine 2D &amp; 3D</li>
-              <li>Unity 2D &amp; 3D</li>
-              <li>OpenGL</li>
-              <li>Vulkan <span class="muted">(intermediate)</span></li>
-            </ul>
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l9 5-9 5-9-5 9-5z"/><path d="M3 12l9 5 9-5M3 17l9 5 9-5"/></svg>Engines &amp; APIs</h3>
+            <ul><li>Unreal Engine 5</li><li>Unity 2D &amp; 3D</li><li>OpenGL</li><li>Vulkan <span class="muted">(intermediate)</span></li></ul>
           </div>
           <div class="skills-card">
-            <h4>Libraries</h4>
-            <ul>
-              <li>Pandas</li>
-              <li>NumPy</li>
-              <li>OpenCV</li>
-              <li>PyTorch</li>
-            </ul>
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg>Libraries</h3>
+            <ul><li>PyTorch</li><li>OpenCV</li><li>NumPy</li><li>Pandas</li></ul>
           </div>
           <div class="skills-card">
-            <h4>Skills</h4>
-            <ul>
-              <li>Gameplay Systems</li>
-              <li>Realtime Rendering, Filmmaking and Animation</li>
-              <li>Machine Learning</li>
-              <li>Physics &amp; Maths</li>
-              <li>Image Processing</li>
-            </ul>
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Domains</h3>
+            <ul><li>Gameplay systems and AI</li><li>Real-time rendering, filmmaking and animation</li><li>Machine learning and image processing</li><li>Physics and maths</li></ul>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="footer">
-      <div class="footer__copyright">
-        <div class="top"><span>Developed by Avi Garg</span></div>
-        <div class="bottom"><span>Inspired by Joe Rogers &amp; Brittany Chiang</span></div>
+    <!-- ====================================================== CONTACT -->
+    <section class="section contact" id="contact" data-reveal>
+      <div class="container">
+        <div class="contact__card">
+          <span class="section__eyebrow">Contact</span>
+          <h2 class="section__title">Let's build something.</h2>
+          <p>Always eager for innovative projects and exciting opportunities. Whether it's a gameplay system, a rendering problem or a vision pipeline, I'd love to hear about it.</p>
+          <div class="contact__links">
+            <a class="btn btn--primary" href="mailto:gargav@tcd.ie">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+              gargav@tcd.ie
+            </a>
+            <a class="btn btn--ghost" href="https://www.linkedin.com/in/gargavi" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn btn--ghost" href="https://github.com/PixelSenseiAvi" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
       </div>
+    </section>
+  </main>
+
+  <!-- ======================================================= FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year">2026</span> Avi Garg. Inspired by Joe Rogers &amp; Brittany Chiang.</p>
       <div class="footer__links">
-        <a href="mailto:gargav@tcd.ie" title="Email" aria-label="Email">
-          <span class="text">email</span>
-          <i class="fas fa-envelope" aria-hidden="true"></i>
-        </a>
-        <a href="https://twitter.com/chik_avi" target="_blank" rel="noopener" title="Twitter" aria-label="Twitter">
-          <span class="text">twitter</span>
-          <i class="fab fa-twitter" aria-hidden="true"></i>
-        </a>
-        <a href="https://github.com/PixelSenseiAvi" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
-          <span class="text">github</span>
-          <i class="fab fa-github" aria-hidden="true"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/gargavi" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
-          <span class="text">linkedin</span>
-          <i class="fab fa-linkedin" aria-hidden="true"></i>
-        </a>
+        <a href="mailto:gargav@tcd.ie" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+        <a href="https://twitter.com/chik_avi" target="_blank" rel="noopener" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 5.8c-.7.3-1.5.5-2.4.6.9-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7C8.4 8.6 5.4 7 3.4 4.5a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5v.1c0 2 1.4 3.6 3.3 4-.6.2-1.2.2-1.8.1.5 1.6 2 2.8 3.8 2.8A8.3 8.3 0 0 1 2 18.2 11.7 11.7 0 0 0 8.3 20c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2z"/></svg></a>
+        <a href="https://github.com/PixelSenseiAvi" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 8.4 22.9c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg></a>
+        <a href="https://www.linkedin.com/in/gargavi" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.4 2H3.6A1.6 1.6 0 0 0 2 3.6v16.8A1.6 1.6 0 0 0 3.6 22h16.8a1.6 1.6 0 0 0 1.6-1.6V3.6A1.6 1.6 0 0 0 20.4 2zM8 19H5V9h3v10zM6.5 7.7a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4zM19 19h-3v-4.9c0-1.2 0-2.7-1.6-2.7s-1.9 1.3-1.9 2.6V19h-3V9h2.9v1.4c.4-.8 1.4-1.6 2.9-1.6 3 0 3.6 2 3.6 4.6V19z"/></svg></a>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <button id="top-button" type="button" aria-label="Back to top">
-      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M12 19V5"/><path d="M5 12l7-7 7 7"/>
-      </svg>
-    </button>
-  </div>
+  <!-- ===================================================== LIGHTBOX -->
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-title">
+    <div class="lightbox__panel">
+      <div class="lightbox__bar">
+        <span class="lightbox__title" id="lightbox-title"></span>
+        <button type="button" class="lightbox__close" aria-label="Close">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <div class="lightbox__stage"></div>
+      <p class="lightbox__caption" hidden></p>
+    </div>
+  </dialog>
 
-  <script defer src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <button id="top-button" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
   <script defer src="js/main.js"></script>
 </body>
-
 </html>
