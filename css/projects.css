@@ -129,3 +129,25 @@
   .lightbox[open] { position: fixed; inset: 0; z-index: 2000; display: grid; place-items: center; background: rgba(6, 6, 10, .86); width: 100%; }
   .lightbox[open] .lightbox__panel { width: min(100vw - 32px, 1100px); }
 }
+
+/* ---------- featured project (TankMates) ---------- */
+.feature-card {
+  max-width: 960px; margin: 0 auto clamp(28px, 4vw, 40px);
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease);
+}
+.feature-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--accent-line); }
+.feature-card__video { position: relative; aspect-ratio: 16 / 9; background: #000; }
+.feature-card__video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.feature-card__bar {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 20px;
+  padding: 18px 22px;
+}
+.feature-card__title { font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 700; letter-spacing: -0.02em; }
+.feature-card__links { display: flex; flex-wrap: wrap; gap: 10px; }
+.feature-card__links .btn { padding: 10px 18px; font-size: .9rem; }
+@media (max-width: 520px) {
+  .feature-card__bar { padding: 14px 16px; }
+  .feature-card__links, .feature-card__links .btn { width: 100%; justify-content: center; }
+}
