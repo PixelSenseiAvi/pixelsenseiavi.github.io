@@ -114,7 +114,8 @@
           }
         });
       },
-      { threshold: 0.12 }
+      // threshold 0: tall sections (projects on mobile) can never reach a 12% ratio
+      { threshold: 0, rootMargin: '0px 0px -10% 0px' }
     );
     els.forEach((el) => io.observe(el));
   }
@@ -270,7 +271,7 @@
   /* -------------------------------------------------------------- filters */
   function initFilters() {
     const bar = document.querySelector('.filters');
-    const cards = Array.from(document.querySelectorAll('.project-card'));
+    const cards = Array.from(document.querySelectorAll('.project-card, .feature-card'));
     if (!bar || !cards.length) return;
     const empty = document.querySelector('.projects__empty');
 
